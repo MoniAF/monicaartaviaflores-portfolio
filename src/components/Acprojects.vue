@@ -5,6 +5,7 @@ import FlowerPJ from '@/assets/svg/FlowerPJ.vue';
 <template>
 
     <div id="projects" class="container-ap">
+        
         <h3>ACADEMIC PROJECTS</h3>
 
         <div class="apcards-box d-flex justify-content-between">
