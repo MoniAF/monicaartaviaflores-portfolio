@@ -93,7 +93,7 @@ h3 {
     @include tablet {
       flex-direction: column !important;
       align-items: center;
-      gap: 2rem;
+      gap: 1rem;
     }
   }
 

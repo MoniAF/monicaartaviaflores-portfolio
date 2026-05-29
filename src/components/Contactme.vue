@@ -42,6 +42,10 @@
 .container-cm {
   min-height: 100vh;
   width: 100%;
+
+  @include mobile {
+    min-height: auto;
+  }
 }
 
 h3 {
@@ -80,9 +84,9 @@ h3 {
 .fondo-cmbox {
   width: 57%;
   height: auto;
-
+  
   @include mobile {
-    display: none !important;
+    width: 90%;
   }
 }
 
@@ -117,10 +121,18 @@ h3 {
 
   img {
     width: 100%;
+
+    @include mobile {
+      width: 90%;
+      margin-top: 2.5rem;
+    }
   }
 
-  @include tablet {
-    display: none !important;
+  @include mobile {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: end;
   }
 }
 
@@ -130,19 +142,12 @@ h3 {
     align-items: center;
     justify-content: center !important;
     min-height: 100vh;
-    padding: 0 1.5rem;
   }
 }
 
 .cm-box .d-flex.justify-content-center.align-items-center {
   @include mobile {
-    position: relative;
-    
-    .position-absolute {
-      position: relative !important;
-      text-align: center;
-      width: 100%;
-    }
+    align-items: center !important;
   }
 }
 </style>
