@@ -53,7 +53,12 @@ import FlowerIcon from '@/assets/svg/FlowerIcon.vue';
 .container-we {
   min-height: 100vh;
   width: 100%;
-  position: relative; 
+  position: relative;
+
+  @include mobile {
+    min-height: auto;
+    padding-bottom: 7rem;
+  }
 }
 
 h3 {
@@ -98,6 +103,12 @@ h3 {
   }
   @include desktop {
     padding-top: 1rem;
+  }
+
+  & > .d-flex.justify-content-center {
+    @include mobile {
+      margin-bottom: 1.3rem;
+    }
   }
 
   & > .d-flex.justify-content-between {
@@ -221,13 +232,13 @@ h3 {
   }
 
   .circle-we {
-    width: 11%;
+    width: 25%;
     height: auto;
     padding-bottom: 0.7rem;
   }
 
   .line-we {
-    width: 20%;
+    width: 40%;
     height: auto;
   }
 }
