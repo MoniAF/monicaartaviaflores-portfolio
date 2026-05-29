@@ -5,28 +5,32 @@
 </template>
 
 <style lang="scss" scoped>
+@use '@/assets/scss/mixins.scss' as *;
 
-.ft-container{
-    background-color: #7A5C7B;
-    width: 100%;
-    height: 16.7vh;
-}
+.ft-container {
+  width: 100%;
+  height: 16.7vh;
 
-.content-ft{
-    font-size: 14px;
+  @include celular {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+  }
+
+  @include desktop {
+    height: 9.8vh;
+  }
+
+  .content-ft {
+    font-size: 0.875rem;
     font-weight: 600;
     text-decoration: none;
-    color: #FFF9F6;
-}
+    color: $color-blanco;
+    transition: color 0.2s ease;
 
-.content-ft:hover{
-    color: #F7C8D8;
-}
-
-@media (min-width: 1800px){
-    .ft-container{
-        height: 9.8vh;
+    &:hover {
+      color: $color-rosa;
     }
+  }
 }
-
 </style>

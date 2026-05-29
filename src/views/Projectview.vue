@@ -54,73 +54,96 @@ const currentProject = projects[route.params.name]
 </template>
 
 <style lang="scss" scoped>
-
-.git-link{
-    text-decoration: none;
-    color: #F7C8D8;
-}
-
-.git-link i{
-     font-size: 18px;
-    -webkit-text-stroke: 0.5px;
-}
+@use '@/assets/scss/mixins.scss' as *;
 
 .container-hm {
   min-height: 100vh;
-}
+  position: relative;
 
-.img-container{
+  .img-container {
     width: 100%;
     height: auto;
     display: flex;
-}
 
-.jc-e{
-    justify-content: end;
-    padding-top: 15px;
-}
+    &.jc-e {
+      justify-content: end;
+      padding-top: 15px;
+    }
+  }
 
-.branchwidth{
+  .branchwidth {
     width: 38%;
-}
 
-.txt-container{
+    @include celular {
+      width: 50%;
+      opacity: 0.4;
+    }
+  }
+
+  .txt-container {
     width: 100%;
     height: 100%;
-}
+    padding: 0 1.5rem;
 
-.title-name{
+    .git-link {
+      text-decoration: none;
+      color: $color-rosa;
+
+      i {
+        font-size: 1.125rem;
+        -webkit-text-stroke: 0.5px;
+      }
+    }
+  }
+
+  .title-name {
     font-family: "Fleur De Leah", cursive;
     font-weight: 400;
     font-style: normal;
-    font-size: 100px;
-    color: #F7C8D8;
+    font-size: 6.25rem;
+    color: $color-rosa;
     line-height: 1.4;
-}
 
-.subtitle-position{
+    @include tablet {
+      font-size: 5rem;
+    }
+    @include celular {
+      font-size: 3.75rem;
+      line-height: 1.2;
+    }
+    @include desktop {
+      font-size: 7.5rem;
+      line-height: 1;
+    }
+  }
+
+  .subtitle-position {
     font-weight: 400;
     font-style: normal;
-    font-size: 20px;
-    color: #FFF9F6;
-}
+    font-size: 1.25rem;
+    color: $color-blanco;
 
-.m-fw1{
+    @include celular {
+      font-size: 1rem;
+      margin-top: 1rem !important;
+    }
+    @include desktop {
+      font-size: 3.4375rem;
+    }
+  }
+
+  .m-fw1 {
     width: 7%;
     margin-top: 7rem;
     margin-left: 8.5rem;
-}
 
-@media (min-width: 1800px){
-
-    .title-name{
-        font-size: 120px;
-        line-height: 1;
+    @include tablet {
+      margin-left: 4rem; 
+      width: 10%;
     }
-
-    .subtitle-position{
-        font-size: 55px;
+    @include celular {
+      display: none !important;
     }
+  }
 }
-
 </style>

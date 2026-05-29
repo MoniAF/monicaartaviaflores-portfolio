@@ -24,83 +24,119 @@
 </template>
 
 <style lang="scss" scoped>
+@use '@/assets/scss/mixins.scss' as *;
 
 .container-es {
   min-height: 100vh;
   margin-left: 4.5rem;
   margin-right: 4.5rem;
-}
 
-.box-clm{
+  @include tablet {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    align-items: center;
+  }
+  @include celular {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    flex-direction: column !important;
+    justify-content: center !important;
+    gap: 4rem;
+  }
+
+  .box-clm {
     width: 20%;
     height: 100vh;
-}
 
-.box-clm img{
-    width: 100%;
-    height: auto;
-}
+    @include tablet {
+      width: 23%;
+    }
+    @include celular {
+      width: 100%;
+      height: auto;
+    }
 
-.box-txtes{
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    &.align-items-center {
+      @include celular {
+        display: none !important;
+      }
+    }
+  }
+
+  .box-txtes {
     margin-top: 9.5rem;
     text-align: center;
-}
 
-h6{
-    font-family: "Fleur De Leah", cursive;
+    @include tablet {
+      margin-top: 12rem;
+    }
+    @include celular {
+      margin-top: 0;
+    }
+    @include desktop {
+      margin-top: 15rem;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  h6 {
+    font-family: $fuente-elegante;
     font-weight: 400;
     font-style: normal;
-    color: #F7C8D8;
+    color: $color-rosa;
     font-size: 4rem;
-}
+    margin-bottom: 0.5rem;
 
-.box-txtes img{
-    width: 100%;
-}
+    @include celular {
+      font-size: 3.2rem;
+    }
+    @include desktop {
+      font-size: 5.5rem;
+      padding-bottom: 1rem;
+    }
+  }
 
-.txt-lg{
+  .txt-lg {
     font-size: 1.25rem;
     font-weight: 600;
-    color: #E8CFAE;
+    color: $color-crema;
     line-height: 23px;
-}
 
-.txt-lg svg{
-    color: #F7C8D8;
-    width: 18px;
-    height: 18px;
-}
+    svg {
+      color: $color-rosa;
+      width: 18px;
+      height: 18px;
+      vertical-align: middle;
+      margin-left: 4px;
 
-.txt-lv{
-    font-size: 0.938rem;
-    font-weight: 500;
-    color: #FFF9F6;
-}
-
-@media (min-width: 1800px){
-    .box-txtes{
-        margin-top: 15rem;
-    }
-
-    h6{
-        font-size: 5.5rem;
-        padding-bottom: 1rem;
-    }
-
-    .txt-lg{
-        font-size: 1.8rem;
-        line-height: 32px;
-    }
-
-    .txt-lg svg{
+      @include desktop {
         width: 23px;
         height: 23px;
+      }
     }
 
-    .txt-lv{
-        font-size: 1.2rem;
+    @include desktop {
+      font-size: 1.8rem;
+      line-height: 32px;
     }
-    
+  }
+
+  .txt-lv {
+    font-size: 0.938rem;
+    font-weight: 500;
+    color: $color-blanco;
+
+    @include desktop {
+      font-size: 1.2rem;
+    }
+  }
 }
-
 </style>

@@ -74,124 +74,153 @@ import FlowerPJ from '@/assets/svg/FlowerPJ.vue';
 </template>
 
 <style lang="scss" scoped>
+@use '@/assets/scss/mixins.scss' as *;
 
 .container-ap {
   min-height: 100vh;
   width: 100%;
 }
 
-h3{
-    margin-left: 4.5rem;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 42px;
-    color: #E8CFAE;
-    text-shadow: 5px 4px 0 #2B2238;
-    letter-spacing: 0;
-    padding-top: 3rem;
+h3 {
+  margin-left: 4.5rem;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 2.625rem;
+  color: $color-crema;
+  text-shadow: 5px 4px 0 $color-oscuro;
+  letter-spacing: 0;
+  padding-top: 3rem;
+
+  @include tablet {
+    font-size: 2rem;
+    margin-left: 2rem;
+    padding-top: 2rem;
+  }
+  @include celular {
+    font-size: 1.75rem;
+    margin-left: 1.5rem;
+    padding-top: 1.5rem;
+  }
+  @include desktop {
+    font-size: 3.4375rem;
+    padding-top: 4rem;
+  }
 }
 
-.apcards-box{
-    width: auto;
-    height: auto;
-    margin-top: 3.8rem;
-    padding-left: 4.5rem;
-    padding-right: 4.5rem;
-}
+.apcards-box {
+  width: auto;
+  height: auto;
+  margin-top: 3.8rem;
+  padding-left: 4.5rem;
+  padding-right: 4.5rem;
 
-.ap-card{
+  @include tablet {
+    flex-wrap: wrap;
+    justify-content: center !important;
+    gap: 3rem 1.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  @include celular {
+    flex-direction: column !important;
+    align-items: center;
+    gap: 4rem;
+    margin-top: 2rem;
+  }
+  @include desktop {
+    margin-top: 6rem;
+  }
+
+  .ap-card {
     display: block;
     width: 22%;
     height: 100%;
-    color: #E8CFAE;
-}
+    color: $color-crema;
+    transition: color 0.2s ease;
 
-.ap-card:hover{
-    color: #F7C8D8;
-}
+    &:hover {
+      color: $color-rosa;
+    }
 
-.flower-apbox{
+    @include tablet {
+      width: 45%;
+    }
+    @include celular {
+      width: 100%;
+      max-width: 280px;
+    }
+  }
+
+  .flower-apbox {
     width: 100%;
     padding-left: 5%;
     padding-right: 5%;
     height: auto;
-}
 
-.flower-apbox img{
-    height: 95%;
-}
+    img {
+      height: 95%;
+    }
+  }
 
-.infoap-card{
+  .infoap-card {
     width: 100%;
     height: auto;
-    background-color: #2B2238;
+    background-color: $color-oscuro;
     margin-top: 1rem;
     padding-top: 0.8rem;
     padding-bottom: 1.2rem;
     border-radius: 80px;
-}
 
-.ap-title{
+    @include desktop {
+      margin-top: 1rem;
+      padding-top: 1.3rem;
+      padding-bottom: 1.9rem;
+    }
+  }
+
+  .ap-title {
     font-size: 1.125rem;
     font-weight: 600;
-    color: #FFF9F6;
-}
+    color: $color-blanco;
 
-.ap-subtitle{
+    @include desktop {
+      font-size: 1.688rem;
+    }
+  }
+
+  .ap-subtitle {
     font-size: 0.938rem;
     font-weight: 500;
-    color: #F7C8D8;
+    color: $color-rosa;
     padding-bottom: 0.4rem;
-}
 
-.ap-button{
-    background-color: #E8CFAE;
+    @include desktop {
+      font-size: 1.188rem;
+      padding-bottom: 0.7rem;
+    }
+  }
+
+  .ap-button {
+    background-color: $color-crema;
     font-size: 0.938rem;
     font-weight: 500;
-    color: #2B2238;
+    color: $color-oscuro;
     text-decoration: none;
     padding-top: 2px;
     padding-bottom: 3px;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     border-radius: 30px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+
+    &:hover {
+      background-color: $color-rosa;
+      color: $color-oscuro;
+    }
+
+    @include desktop {
+      font-size: 1.188rem;
+    }
+  }
 }
-
-.ap-button:hover{
-    background-color: #F7C8D8;
-    color: #2B2238;
-}
-
-@media (min-width: 1800px){
-
-    h3{
-        font-size: 55px;
-        padding-top: 4rem;
-    }
-
-    .apcards-box{
-        margin-top: 6rem;
-    }
-
-    .infoap-card{
-        margin-top: 1rem;
-        padding-top: 1.3rem;
-        padding-bottom: 1.9rem;
-    }
-
-    .ap-title{
-        font-size: 1.688rem;
-    }
-
-    .ap-subtitle{
-        font-size: 1.188rem;
-        padding-bottom: 0.7rem;
-    }
-
-    .ap-button{
-        font-size: 1.188rem;
-    }
-
-}
-
 </style>

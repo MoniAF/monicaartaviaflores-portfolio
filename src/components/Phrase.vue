@@ -6,48 +6,56 @@
 </template>
 
 <style lang="scss" scoped>
-
-.space{
-    background-color: #1c00bb;
-    width: 100%;
-    height: 6.5rem;
-}
+@use '@/assets/scss/mixins.scss' as *;
 
 .container-ph {
   min-height: 100vh;
   font-size: 100px;
   line-height: 85px;
   text-align: center;
-}
 
-.container-ph img{
+  @include tablet {
+    font-size: 70px;
+    line-height: 60px;
+  }
+  @include celular {
+    font-size: 45px;
+    line-height: 40px;
+  }
+  @include desktop {
+    font-size: 120px;
+    line-height: 100px;
+  }
+
+  img {
     width: 43%;
     height: auto;
-}
 
-.txtc-ph{
-    font-family: "Fleur De Leah", cursive;
+    @include celular {
+      width: 70%;
+      margin-top: 1.5rem;
+    }
+  }
+
+  .txtc-ph {
+    font-family: $fuente-elegante;
     font-weight: 400;
     font-style: normal;
-    color: #F7C8D8;
-}
+    color: $color-rosa;
+  }
 
-.txtn-ph{
+  .txtn-ph {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-style: normal;
     padding-left: 2.5rem;
-    color: #FFF9F6;
-}
+    color: $color-blanco;
 
-@media (min-width: 1800px){
-
-    .container-ph {
-        font-size: 120px;
-        line-height: 100px;
-        text-align: center;
+    @include celular {
+      padding-left: 0;
+      display: block;
+      margin-top: 0.5rem;
     }
-
+  }
 }
-
 </style>

@@ -44,134 +44,155 @@ import Circle from '../assets/img/circle.svg';
 </template>
 
 <style lang="scss" scoped>
+@use '@/assets/scss/mixins.scss' as *;
+
 .container-ed {
-    min-height: 100vh;
-    display: block;
+  min-height: 100vh;
+  display: block;
 }
 
-h3{
-    margin-left: 4.5rem;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 42px;
-    color: #F7C8D8;
-    text-shadow: 5px 4px 0 #2B2238;
-    letter-spacing: 0;
-    padding-top: 3rem;
+h3 {
+  margin-left: 4.5rem;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 42px;
+  color: $color-rosa;
+  text-shadow: 5px 4px 0 $color-oscuro;
+  letter-spacing: 0;
+  padding-top: 3rem;
+
+  @include tablet {
+    font-size: 32px;
+    margin-left: 2rem;
+    padding-top: 2rem;
+  }
+  @include celular {
+    font-size: 28px;
+    margin-left: 1.5rem;
+    padding-top: 1.5rem;
+  }
+  @include desktop {
+    font-size: 55px;
+    padding-top: 4rem;
+  }
 }
 
-.box-content-ed{
-    width: 100%;
-    height: 30rem;
-}
+.box-content-ed {
+  width: 100%;
+  height: 30rem;
 
-.branch-ed{
+  @include tablet {
+    height: auto;
+    padding: 0 1.5rem;
+  }
+  @include desktop {
+    height: 45rem;
+  }
+
+  .branch-ed {
     width: 22%;
     display: flex;
-    align-items: end;
-}
+    align-items: flex-end;
 
-.branch-ed img{
-    width: 100%;
-}
+    img {
+      width: 100%;
+    }
 
-.card-space-ed{
+    @include tablet {
+      display: none;
+    }
+  }
+
+  .card-space-ed {
     width: 56%;
     height: auto;
     margin-bottom: 3.5rem;
-}
 
-.bxcard-ed{
+    @include tablet {
+      width: 100%;
+      flex-direction: column !important;
+      align-items: center;
+      gap: 2rem !important;
+      margin-bottom: 3rem;
+    }
+    @include desktop {
+      margin-bottom: 7rem;
+    }
+  }
+
+  .bxcard-ed {
     width: 36%;
     position: relative;
-}
 
-.card-circle{
-    width: 80%;
-    height: auto;
-    position: absolute;
-    margin-left: 10%;
-    margin-right: 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.card-circle svg{
-    width: 100%;
-    height: 100%;
-    color: #2B2238;
-}
-
-.card-circle img{
-    width: 80%;
-    position: absolute;
-}
-
-.card-ed{
-    width: 100%;
-    height: 100%;
-    margin-top: 40%;
-    background-color: #F7C8D8;
-    border-radius: 20%;
-    padding-top: 45%;
-}
-
-h4{
-    font-weight: 600;
-    color: #2B2238;
-    text-align: center;
-    line-height: 23px;
-    letter-spacing: 0;
-    font-size: 17px;
-}
-
-h5{
-    font-weight: 400;
-    color: #2B2238;
-    text-align: center;
-    line-height: 23px;
-    letter-spacing: 0;
-    font-size: 17px;
-}
-
-h6{
-    font-weight: 500;
-    color: #7A5C7B;
-    text-align: center;
-    line-height: 23px;
-    letter-spacing: 0;
-    font-size: 17px;
-}
-
-@media (min-width: 1800px){
-    h3{
-        font-size: 55px;
-        padding-top: 4rem;
+    @include tablet {
+      width: 280px;
+    }
+    @include celular {
+      width: 100%;
+      max-width: 260px;
     }
 
-    .box-content-ed{
-        height: 45rem;
+    .card-circle {
+      width: 80%;
+      height: auto;
+      position: absolute;
+      margin-left: 10%;
+      margin-right: 10%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      svg {
+        width: 100%;
+        height: 100%;
+        color: $color-oscuro;
+      }
+
+      img {
+        width: 80%;
+        position: absolute;
+      }
     }
 
-    .card-space-ed{
-        margin-bottom: 7rem;
+    .card-ed {
+      width: 100%;
+      height: 100%;
+      margin-top: 40%;
+      background-color: $color-rosa;
+      border-radius: 20%;
+      padding: 45% 1rem 1.5rem 1rem;
     }
+  }
+}
 
-    h4{
-        font-size: 25px;
-        line-height: 30px;
-    }
+h4, h5, h6 {
+  text-align: center;
+  line-height: 23px;
+  letter-spacing: 0;
+  font-size: 17px;
 
-    h5{
-        font-size: 25px;
-        line-height: 30px;
-    }
+  @include celular {
+    font-size: 15px;
+    line-height: 20px;
+  }
+  @include desktop {
+    font-size: 25px;
+    line-height: 30px;
+  }
+}
 
-    h6{
-        font-size: 25px;
-        line-height: 30px;
-    }
+h4 {
+  font-weight: 600;
+  color: $color-oscuro;
+}
+
+h5 {
+  font-weight: 400;
+  color: $color-oscuro;
+}
+
+h6 {
+  font-weight: 500;
+  color: $color-morado;
 }
 </style>

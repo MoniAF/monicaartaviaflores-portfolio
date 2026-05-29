@@ -20,80 +20,94 @@
 </template>
 
 <style lang="scss" scoped>
+@use '@/assets/scss/mixins.scss' as *;
 
-h3{
-    position: absolute;
-    margin-left: 4.5rem;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 42px;
-    color: #E8CFAE;
-    text-shadow: 5px 4px 0 #2B2238;
-    letter-spacing: 0;
-    padding-top: 3rem;
+h3 {
+  position: absolute;
+  margin-left: 4.5rem;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 42px;
+  color: $color-crema; 
+  text-shadow: 5px 4px 0 $color-oscuro; 
+  letter-spacing: 0;
+  padding-top: 3rem;
+
+  @include tablet {
+    font-size: 32px;
+    margin-left: 2rem;
+    padding-top: 2rem;
+  }
+  @include celular {
+    font-size: 26px;
+    margin-left: 1.5rem;
+    padding-top: 1.5rem;
+  }
+  @include desktop {
+    font-size: 55px;
+    padding-top: 4rem;
+  }
 }
 
 .container-am {
-    width: 100%;
-    min-height: 100vh;
-}
+  width: 100%;
+  min-height: 100vh;
 
-.box-am{
+  .box-am {
     width: 52%;
     height: 58vh;
     margin-left: 4.5rem;
     background-image: url("../assets/img/box1.svg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
-}
 
-.txt-am{
+    @include tablet {
+      width: 90%;
+      height: auto;
+      margin-left: 0;
+      background-image: none;
+      padding: 0;
+    }
+  }
+
+  .txt-am {
     width: 100%;
     height: 100%;
-    text-align:justify;
+    text-align: justify;
     font-size: 17px;
     font-weight: 400;
     letter-spacing: 0;
     line-height: 23px;
-}
 
-.fl-am{
+    @include desktop {
+      font-size: 24px;
+      line-height: 32px;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  .fl-am {
     position: relative;
     width: 39%;
-}
+  }
 
-.flower-img{
+  .flower-img {
     width: 100%;
     display: block;
-}
+  }
 
-.girl-am{
+  .girl-am {
     position: absolute;
     inset: 0;
-
     display: flex;
     justify-content: center;
     align-items: center;
-}
 
-.girl-am img{
-    width: 65%;
-    margin-left: 3rem;
-}
-
-@media (min-width: 1800px){
-
-    .txt-am{
-        font-size: 24px;
-        line-height: 32px;
-        padding-left: 2rem;
-        padding-right: 2rem;
+    img {
+      width: 65%;
+      margin-left: 3rem;
     }
-
-    h3{
-        font-size: 55px;
-        padding-top: 4rem;
-    }
-
+  }
 }
 </style>

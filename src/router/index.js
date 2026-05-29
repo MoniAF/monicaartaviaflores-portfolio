@@ -17,7 +17,18 @@ const routes = [
 
 const router = createRouter({
     history: createWebHistory(),
-    routes
+    routes,
+    // ¡Agrega esta función clave aquí abajo!
+    scrollBehavior(to, from, savedPosition) {
+        if (to.hash) {
+            return {
+                el: to.hash,
+                behavior: 'smooth',
+                top: 80 // Ajusta este margen para que el menú flotante no tape los títulos de tus secciones
+            }
+        }
+        return { top: 0 }
+    }
 })
 
 export default router

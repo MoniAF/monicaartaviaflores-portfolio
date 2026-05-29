@@ -17,63 +17,75 @@
 </template>
 
 <style lang="scss" scoped>
+@use '@/assets/scss/mixins.scss' as *;
 
 .container-hm {
   min-height: 100vh;
-}
 
-.img-container{
+  .img-container {
     width: 100%;
     height: auto;
     display: flex;
-}
 
-.jc-e{
-    justify-content: end;
-    padding-top: 15px;
-}
+    &.jc-e {
+      justify-content: flex-end;
+      padding-top: 15px;
+    }
+  }
 
-.branchwidth{
+  .branchwidth {
     width: 38%;
-}
+    
+    @include celular {
+      width: 25%;
+    }
+  }
 
-.txt-container{
+  .txt-container {
     width: 100%;
     height: 100%;
-}
+  }
 
-.title-name{
-    font-family: "Fleur De Leah", cursive;
+  .title-name {
+    font-family: $fuente-elegante;
     font-weight: 400;
     font-style: normal;
     font-size: 100px;
-    color: #F7C8D8;
+    color: $color-rosa;          
     line-height: 1;
-}
 
-.subtitle-position{
+    @include tablet { font-size: 70px; }   
+    @include celular { font-size: 45px; }  
+    @include desktop { font-size: 120px; } 
+  }
+
+  .subtitle-position {
     font-weight: 400;
     font-style: normal;
     font-size: 45px;
-    color: #FFF9F6;
-}
+    color: $color-blanco;
 
-.m-fw1{
+    @include tablet { font-size: 30px; }
+    @include celular { font-size: 20px; letter-spacing: 2px; }
+    @include desktop { font-size: 55px; }
+  }
+
+  .m-fw1 {
     width: 7%;
     margin-top: 7rem;
     margin-left: 8.5rem;
-}
 
-@media (min-width: 1800px){
-
-    .title-name{
-        font-size: 120px;
-        line-height: 1;
+    @include tablet {
+      width: 12%;
+      margin-top: 4rem;
+      margin-left: 3rem;
     }
-
-    .subtitle-position{
-        font-size: 55px;
+    @include celular {
+      width: 15%;
+      margin-top: 2.5rem;
+      margin-left: 1rem;
     }
+  }
 }
 
 </style>

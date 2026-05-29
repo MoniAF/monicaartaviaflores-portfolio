@@ -48,161 +48,187 @@ import FlowerIcon from '@/assets/svg/FlowerIcon.vue';
 </template>
 
 <style lang="scss" scoped>
+@use '@/assets/scss/mixins.scss' as *;
 
 .container-we {
   min-height: 100vh;
   width: 100%;
+  position: relative; 
 }
 
-h3{
-    margin-left: 4.5rem;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 42px;
-    color: #F7C8D8;
-    text-shadow: 5px 4px 0 #2B2238;
-    letter-spacing: 0;
-    padding-top: 3rem;
+h3 {
+  margin-left: 4.5rem;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 42px;
+  color: $color-rosa;
+  text-shadow: 5px 4px 0 $color-oscuro;
+  letter-spacing: 0;
+  padding-top: 3rem;
+
+  @include tablet {
+    font-size: 32px;
+    margin-left: 2rem;
+    padding-top: 2rem;
+  }
+  @include celular {
+    font-size: 28px;
+    margin-left: 1.5rem;
+    padding-top: 1.5rem;
+  }
+  @include desktop {
+    font-size: 55px;
+    padding-top: 4rem;
+  }
 }
 
-.box-wkcards{
-    width: auto;
-    height: auto;
-    margin-left: 4.5rem;
-    margin-right: 4.5rem;
-}
+.box-wkcards {
+  width: auto;
+  height: auto;
+  margin-left: 4.5rem;
+  margin-right: 4.5rem;
 
-.wk-card{
+  @include tablet {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  @include celular {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+  @include desktop {
+    padding-top: 1rem;
+  }
+
+  & > .d-flex.justify-content-between {
+    @include tablet {
+      flex-direction: column !important;
+      align-items: center;
+      gap: 2rem;
+    }
+  }
+
+  .wk-card {
     width: 48.7%;
     height: auto;
     margin-top: 4.8rem;
-    background-color: #2B2238;
-    padding-left: 1.2rem;
-    padding-right: 1.2rem;
-    padding-top: 2.2rem;
-    padding-bottom: 2.2rem;
+    background-color: $color-oscuro;
+    padding: 2.2rem 1.2rem;
     border-radius: 45px;
-}
 
-.wecard-title{
-    font-size: 1.5rem;
+    @include tablet {
+      width: 100%;
+      max-width: 550px;
+      margin-top: 2rem;
+    }
+    @include celular {
+      border-radius: 30px;
+      padding: 1.8rem 1rem;
+    }
+    @include desktop {
+      margin-top: 6.8rem;
+      padding: 4.2rem 2.2rem;
+    }
+  }
+
+  .wecard-title {
+    font-size: 1.42rem;
     font-weight: 700;
-    color: #FFF9F6;
-}
+    color: $color-blanco;
+    text-transform: uppercase;
 
-.wecard-subtitle{
+    @include celular {
+      font-size: 1.25rem;
+    }
+    @include desktop {
+      font-size: 2rem;
+    }
+  }
+
+  .wecard-subtitle {
     font-size: 1.25rem;
     font-weight: 500;
-    color: #F7C8D8;
+    color: $color-rosa;
     padding-bottom: 0.5rem;
-}
 
-.wecard-text{
+    @include celular {
+      font-size: 1rem;
+    }
+    @include desktop {
+      font-size: 1.6rem;
+      padding-bottom: 1rem;
+    }
+  }
+
+  .wecard-text {
     font-size: 0.813rem;
     font-weight: 400;
     line-height: 20px;
-    color: #FFF9F6;
-}
+    color: $color-blanco; 
 
-.fw-we{
-    color: #F7C8D8;
+    @include desktop {
+      font-size: 1.15rem;
+      line-height: 28px;
+    }
+  }
+
+  .fw-we {
+    color: $color-rosa;
     width: 14px;
     height: 14px;
     transform: rotate(45deg);
-}
+    display: inline-block;
+    margin-right: 4px;
 
-.star-one{
+    @include desktop {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  .star-one {
     width: 5rem;
     height: auto;
-}
 
-.star-two{
+    @include celular {
+      width: 3.5rem;
+    }
+    @include desktop {
+      width: 6.6rem;
+    }
+  }
+
+  .star-two {
     width: 4.6rem;
     height: auto;
+
+    @include celular {
+      width: 3.1rem;
+    }
+    @include desktop {
+      width: 5.4rem;
+    }
+  }
 }
 
-.we-decoration{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
+.we-decoration {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 
-.circle-we{
+  @include tablet {
+    display: none;
+  }
+
+  .circle-we {
     width: 11%;
     height: auto;
     padding-bottom: 0.7rem;
-}
+  }
 
-.line-we{
+  .line-we {
     width: 20%;
     height: auto;
+  }
 }
-
-@media (min-width: 1800px){
-
-    h3{
-        font-size: 55px;
-        padding-top: 4rem;
-    }
-
-    .box-wkcards{
-        padding-top: 1rem;
-    }
-
-    .wk-card{
-        margin-top: 6.8rem;
-        padding-left: 2.2rem;
-        padding-right: 2.2rem;
-        padding-top: 4.2rem;
-        padding-bottom: 4.2rem;
-    }
-
-    .wecard-title{
-        font-size: 2.1rem;
-    }
-
-    .wecard-subtitle{
-        font-size: 1.6rem;
-        padding-bottom: 1rem;
-    }
-
-    .wecard-text{
-        font-size: 1.15rem;
-        line-height: 28px;
-    }
-
-    .fw-we{
-        width: 18px;
-        height: 18px;
-    }
-
-    .star-one{
-        width: 6.6rem;
-        height: auto;
-    }
-
-    .star-two{
-        width: 5.4rem;
-        height: auto;
-    }
-
-    .we-decoration{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-    }
-
-    .circle-we{
-        width: 11%;
-        height: auto;
-        padding-bottom: 0.7rem;
-    }
-
-    .line-we{
-        width: 20%;
-        height: auto;
-    }
-
-}
-
 </style>

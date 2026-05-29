@@ -105,109 +105,188 @@
 </template>
 
 <style lang="scss" scoped>
+@use '@/assets/scss/mixins.scss' as *;
 
 .container-sk {
   min-height: 100vh;
   width: 100%;
 }
 
-h3{
-    margin-left: 4.5rem;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 42px;
-    color: #E8CFAE;
-    text-shadow: 5px 4px 0 #2B2238;
-    letter-spacing: 0;
-    padding-top: 3rem;
+h3 {
+  margin-left: 4.5rem;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 42px;
+  color: $color-crema;
+  text-shadow: 5px 4px 0 $color-oscuro;
+  letter-spacing: 0;
+  padding-top: 3rem;
+
+  @include tablet {
+    font-size: 32px;
+    margin-left: 2rem;
+    padding-top: 2rem;
+  }
+  @include celular {
+    font-size: 28px;
+    margin-left: 1.5rem;
+    padding-top: 1.5rem;
+  }
+  @include desktop {
+    font-size: 55px;
+    padding-top: 4rem;
+  }
 }
 
-.boxsk-cards{
-    width: auto;
-    height: auto;
-    padding-left: 4.5rem;
-    padding-right: 4.5rem;
-}
+.boxsk-cards {
+  width: auto;
+  height: auto;
+  padding-left: 4.5rem;
+  padding-right: 4.5rem;
 
-.card-boxsk{
+  @include tablet {
+    flex-wrap: wrap;
+    justify-content: center !important;
+    gap: 3rem 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  @include celular {
+    flex-direction: column !important;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .card-boxsk {
     width: 22%;
-}
 
-.subtitle-box{
+    @include tablet {
+      width: 45%;
+    }
+    @include celular {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+
+  .subtitle-box {
     width: 100%;
     height: 4rem;
     font-size: 25px;
     font-weight: 500;
     text-align: center;
-    color: #FFF9F6;
-}
+    color: $color-blanco;
 
-.ss-card{
+    @include tablet {
+      height: auto;
+      margin-bottom: 1rem;
+      font-size: 22px;
+    }
+    @include desktop {
+      height: 6rem;
+      font-size: 30px;
+    }
+  }
+
+  .mt-sk {
+    margin-top: 0.9rem;
+  }
+
+  .tscard-container {
     width: 100%;
     height: 21.5rem;
-    background-color: #7A5C7B;
-    border: 4px solid #2B2238;
-    color: #FFF9F6;
-    border-radius: 20px;
-    text-align: center;
-}
 
-.ss-txt{
+    @include desktop {
+      height: 31.5rem;
+    }
+  }
+
+  .ts-cardbox {
     width: 100%;
+    height: 50%;
+    position: relative;
+  }
+
+  .ts-card {
+    width: 100%;
+    height: 100%;
+    background-color: $color-morado;
+    border: 4px solid $color-blanco;
+    border-radius: 20px;
+    color: $color-blanco;
     font-size: 16px;
     font-weight: 400;
-}
+    transition: border-color 0.2s ease;
 
-.tscard-container{
-    width: 100%;
-    height: 21.5rem;
-}
+    &:hover {
+      border-color: $color-oscuro;
+    }
 
-.mt-sk{
-    margin-top: 0.9rem;
-}
+    @include desktop {
+      font-size: 22px;
+    }
+  }
 
-.title-tscard{
+  .title-tscard {
     width: 80%;
     height: 2rem;
-    background-color: #F7C8D8;
-    color: #2B2238;
+    background-color: $color-rosa;
+    color: $color-oscuro;
     font-size: 14px;
     font-weight: 500;
     text-align: center;
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
     border-radius: 15px;
-}
 
-.tt-box{
+    @include desktop {
+      width: 75%;
+      font-size: 18px;
+      padding-top: 0.125rem;
+      padding-bottom: 0.125rem;
+    }
+  }
+
+  .tt-box {
     width: 100%;
     position: absolute;
     top: -0.9rem;
-}
+  }
 
-.ts-cardbox{
+  .ss-card {
     width: 100%;
-    height: 50%;
-    position: relative;
-}
-
-.ts-card{
-    width: 100%;
-    height: 100%;
-    background-color: #7A5C7B;
-    border: 4px solid #FFF9F6;
+    height: 21.5rem;
+    background-color: $color-morado;
+    border: 4px solid $color-oscuro;
+    color: $color-blanco;
     border-radius: 20px;
-    color: #FFF9F6;
+    text-align: center;
+    position: relative;
+
+    @include desktop {
+      height: 31.5rem;
+    }
+  }
+
+  .ss-txt {
+    width: 100%;
     font-size: 16px;
     font-weight: 400;
-}
 
-.ts-card:hover{
-    border-color: #2B2238;
-}
+    p {
+      margin-bottom: 0.5rem;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
 
-.flower-sk{
+    @include desktop {
+      font-size: 22px;
+    }
+  }
+
+  .flower-sk {
     width: 4.2rem;
     height: auto;
     display: flex;
@@ -216,49 +295,12 @@ h3{
     margin-right: -1.8rem;
     rotate: 20deg;
     z-index: 3;
+
+    @include desktop {
+      width: 5.8rem;
+      margin-top: -2.2rem;
+      margin-right: -2.4rem;
+    }
+  }
 }
-
-@media (min-width: 1800px){
-
-    h3{
-        font-size: 55px;
-        padding-top: 4rem;
-    }
-
-    .subtitle-box{
-        height: 6rem;
-        font-size: 30px;
-    }
-
-    .ss-card{
-        height: 31.5rem;
-    }
-
-    .tscard-container{
-        width: 100%;
-        height: 31.5rem;
-    }
-
-    .title-tscard{
-        width: 75%;
-        font-size: 18px;
-        padding-top: 0.125rem;
-        padding-bottom: 0.125rem;
-    }
-
-    .ts-card{
-        font-size: 22px;
-    }
-
-    .flower-sk{
-        width: 5.8rem;
-        margin-top: -2.2rem;
-        margin-right: -2.4rem;
-    }
-
-    .ss-txt{
-        font-size: 22px;
-    }
-}
-
 </style>

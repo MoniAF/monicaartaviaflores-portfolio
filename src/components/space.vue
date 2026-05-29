@@ -3,9 +3,10 @@
 </template>
 
 <style lang="scss" scoped>
+@use '@/assets/scss/variables.scss' as *;
 
 .space{
-    background-color: #7A5C7B;
+    background-color: $color-morado;
     width: 100%;
     height: 16.7vh;
 }
@@ -15,5 +16,4 @@
         height: 9.8vh;
     }
 }
-
 </style>

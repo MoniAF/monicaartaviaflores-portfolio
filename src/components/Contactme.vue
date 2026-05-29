@@ -37,73 +37,112 @@
 </template>
 
 <style lang="scss" scoped>
+@use '@/assets/scss/mixins.scss' as *;
 
 .container-cm {
   min-height: 100vh;
   width: 100%;
 }
 
-h3{
-    margin-left: 4.5rem;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 42px;
-    color: #F7C8D8;
-    text-shadow: 5px 4px 0 #2B2238;
-    letter-spacing: 0;
-    padding-top: 3rem;
+h3 {
+  margin-left: 4.5rem;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 2.625rem;
+  color: $color-rosa;
+  text-shadow: 5px 4px 0 $color-oscuro;
+  letter-spacing: 0;
+  padding-top: 3rem;
+
+  @include tablet {
+    font-size: 2rem;
+    margin-left: 2rem;
+  }
+  @include celular {
+    font-size: 1.75rem;
+    margin-left: 0;
+    text-align: center;
+  }
+  @include desktop {
+    font-size: 3.4375rem;
+    padding-top: 4rem;
+  }
 }
 
-.cm-image{
-    width: 57%;
-    height: 100vh;
-}
+.cm-box {
+  width: 43%;
 
-.cm-image img{
+  @include tablet {
     width: 100%;
+  }
 }
 
-.cm-box{
-    width: 43%;
+.fondo-cmbox {
+  width: 57%;
+  height: auto;
+
+  @include celular {
+    display: none !important;
+  }
 }
 
-.fondo-cmbox{
-    width: 57%;
-    height: auto;
+.title-cm {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: $color-rosa;
+
+  @include desktop {
+    font-size: 1.4375rem;
+  }
 }
 
-.title-cm{
-    font-size: 17px;
-    font-weight: 600;
-    color: #F7C8D8;
+.content-cm {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: $color-blanco;
+
+  &:hover {
+    color: $color-oscuro;
+  }
+
+  @include desktop {
+    font-size: 1.125rem;
+  }
 }
 
-.content-cm{
-    font-size: 14px;
-    font-weight: 600;
-    text-decoration: none;
-    color: #FFF9F6;
+.cm-image {
+  width: 57%;
+  height: 100vh;
+
+  img {
+    width: 100%;
+  }
+
+  @include tablet {
+    display: none !important;
+  }
 }
 
-.content-cm:hover{
-    color: #2B2238;
+.container-cm > .d-flex {
+  @include tablet {
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: center !important;
+    min-height: 100vh;
+    padding: 0 1.5rem;
+  }
 }
 
-@media (min-width: 1800px){
-
-    h3{
-        font-size: 55px;
-        padding-top: 4rem;
-    }
-
-    .title-cm{
-        font-size: 23px;
-    }
-
-    .content-cm{
-        font-size: 18px;
-    }
+.cm-box .d-flex.justify-content-center.align-items-center {
+  @include celular {
+    position: relative;
     
+    .position-absolute {
+      position: relative !important;
+      text-align: center;
+      width: 100%;
+    }
+  }
 }
-
 </style>
