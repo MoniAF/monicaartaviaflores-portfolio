@@ -49,7 +49,7 @@ h3 {
     padding-top: 1.5rem;
     margin-bottom: 2.5rem;
   }
-  
+
   @include desktop {
     font-size: 55px;
     padding-top: 4rem;
@@ -62,6 +62,7 @@ h3 {
 
   @include celular {
     display: block !important;
+    min-height: auto;
   }
 
     .am-extrac {
@@ -92,7 +93,7 @@ h3 {
       padding-top: 1.5rem;
       padding-bottom: 1.5rem;
       box-shadow: inset 0 0 15px #a58862;
-      margin-bottom: 4rem;
+      margin-bottom: 3rem;
 
       &.ps-5{
         padding-left: 0 !important;
@@ -136,7 +137,7 @@ h3 {
 
     @include celular {
       width: 100%;
-      margin-top: 2rem;
+      //margin-top: 0rem;
       display: flex;
       justify-content: end;
     }
