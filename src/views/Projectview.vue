@@ -92,6 +92,11 @@ const currentProject = projects[route.params.name]
       i {
         font-size: 1.125rem;
         -webkit-text-stroke: 0.5px;
+
+        @include mobile {
+            font-size: 0.75rem;
+            -webkit-text-stroke: 0.3px;
+        }
       }
     }
   }
@@ -104,16 +109,16 @@ const currentProject = projects[route.params.name]
     color: $color-rosa;
     line-height: 1.4;
 
+    @include desktop {
+      font-size: 7.5rem;
+      line-height: 1.2;
+    }
     @include tablet {
       font-size: 5rem;
     }
     @include mobile {
       font-size: 3.75rem;
       line-height: 1.2;
-    }
-    @include desktop {
-      font-size: 7.5rem;
-      line-height: 1;
     }
   }
 
@@ -124,11 +129,11 @@ const currentProject = projects[route.params.name]
     color: $color-blanco;
 
     @include mobile {
-      font-size: 1rem;
+      font-size: 0.8rem;
       margin-top: 1rem !important;
     }
     @include desktop {
-      font-size: 3.4375rem;
+      font-size: 2rem;
     }
   }
 
