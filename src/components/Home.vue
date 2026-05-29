@@ -3,7 +3,7 @@
         <div class="img-container jc-e">
             <img src="../assets/img/branch1right.svg" class="branchwidth" alt="branchright">
         </div>
-        <div class="img-container">
+        <div class="img-container jc-s">
             <img src="../assets/img/branch1left.svg" class="branchwidth" alt="branchleft">
         </div>
         <div class="position-absolute z-1 top-0 txt-container d-flex justify-content-center align-items-center">
@@ -30,6 +30,16 @@
     &.jc-e {
       justify-content: flex-end;
       padding-top: 15px;
+
+      @include celular {
+        padding-top: 4rem;
+      }
+    }
+
+    &.jc-s {
+      @include celular {
+        padding-bottom: 4rem;
+      }
     }
   }
 
@@ -37,7 +47,7 @@
     width: 38%;
     
     @include celular {
-      width: 25%;
+      width: 75%;
     }
   }
 
@@ -80,10 +90,11 @@
       margin-top: 4rem;
       margin-left: 3rem;
     }
+
     @include celular {
       width: 15%;
-      margin-top: 2.5rem;
-      margin-left: 1rem;
+      margin-top: 15.5rem;
+      margin-left: 3rem;
     }
   }
 }

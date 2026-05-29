@@ -137,8 +137,8 @@ onUnmounted(() => {
     }
 
     @include celular {
-      width: 4rem;
-      height: 4rem;
+      //width: 4rem;
+      //height: 4rem;
       font-size: 2rem;
       margin-left: 1rem;
     }
