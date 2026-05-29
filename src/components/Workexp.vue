@@ -62,29 +62,7 @@ import FlowerIcon from '@/assets/svg/FlowerIcon.vue';
 }
 
 h3 {
-  margin-left: 4.5rem;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 42px;
   color: $color-rosa;
-  text-shadow: 5px 4px 0 $color-oscuro;
-  letter-spacing: 0;
-  padding-top: 3rem;
-
-  @include tablet {
-    font-size: 32px;
-    margin-left: 2rem;
-    padding-top: 2rem;
-  }
-  @include mobile {
-    font-size: 28px;
-    margin-left: 1.5rem;
-    padding-top: 1.5rem;
-  }
-  @include desktop {
-    font-size: 55px;
-    padding-top: 4rem;
-  }
 }
 
 .box-wkcards {
