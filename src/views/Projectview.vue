@@ -45,7 +45,7 @@ const currentProject = projects[route.params.name]
         <div class="position-absolute z-1 top-0 txt-container d-flex justify-content-center align-items-center">
             <Div class="text-center">
                 <h1 class="title-name m-0">{{ currentProject.title }}</h1>
-                <p class="subtitle-position m-0">More information about this project <span>coming soon.</span><br>In the meantime, visit my <a class="git-link" :href="currentProject.plink">GitHub Repository <i class="bi bi-box-arrow-up-right icon-pj"></i></a> for details.</p>
+                <p class="subtitle-position m-0">More information about this project <span>coming soon.</span><br>In the meantime, visit my <a class="git-link" :href="currentProject.plink">GitHub Repository <i class="bi bi-box-arrow-up-right"></i></a> for details.</p>
             </Div>
         </div>
         <img class="position-absolute z-2 top-0 m-fw1" src="../assets/img/flowers1.svg" alt="flowers1">
