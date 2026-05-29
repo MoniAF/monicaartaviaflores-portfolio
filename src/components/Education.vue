@@ -66,11 +66,17 @@ h3 {
     margin-left: 2rem;
     padding-top: 2rem;
   }
+
   @include celular {
-    font-size: 28px;
+    position: relative;
+    font-size: 35px;
     margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    text-align: center;
     padding-top: 1.5rem;
+    margin-bottom: 2.5rem;
   }
+  
   @include desktop {
     font-size: 55px;
     padding-top: 4rem;

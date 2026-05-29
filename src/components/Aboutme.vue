@@ -39,6 +39,7 @@ h3 {
     margin-left: 2rem;
     padding-top: 2rem;
   }
+
   @include celular {
     position: relative;
     font-size: 35px;
@@ -48,6 +49,7 @@ h3 {
     padding-top: 1.5rem;
     margin-bottom: 2.5rem;
   }
+  
   @include desktop {
     font-size: 55px;
     padding-top: 4rem;
