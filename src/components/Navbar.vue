@@ -113,6 +113,10 @@ onUnmounted(() => {
   .hamburger-box {
     position: fixed;
     margin-top: 1rem;
+
+    @include celular {
+      margin-top: 1.5rem;
+    }
   }
 
   .hamburger-btn {
@@ -134,6 +138,13 @@ onUnmounted(() => {
 
     &:hover {
       transform: scale(1.05);
+    }
+
+    @include celular {
+      font-size: 2.5rem;
+      width: 5rem;
+      height: 5rem;
+      margin-left: 1.5rem;
     }
   }
 
