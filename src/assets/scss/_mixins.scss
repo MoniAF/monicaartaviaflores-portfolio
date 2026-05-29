@@ -5,8 +5,16 @@
   @media (max-width: #{$breakpoint-celular}) { @content; }
 }
 
+@mixin celular-horizontal {
+  @media (orientation: landscape) and (max-height: 480px) { @content; }
+}
+
 @mixin tablet {
   @media (max-width: #{$breakpoint-tablet}) { @content; }
+}
+
+@mixin tablet-horizontal {
+  @media (orientation: landscape) and (max-height: 850px) { @content; }
 }
 
 @mixin laptop {

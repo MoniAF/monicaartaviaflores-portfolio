@@ -113,10 +113,6 @@ onUnmounted(() => {
   .hamburger-box {
     position: fixed;
     margin-top: 1rem;
-
-    @include celular {
-      margin-top: 1.5rem;
-    }
   }
 
   .hamburger-btn {
@@ -141,10 +137,8 @@ onUnmounted(() => {
     }
 
     @include celular {
-      font-size: 2.5rem;
-      width: 5rem;
-      height: 5rem;
-      margin-left: 1.5rem;
+      font-size: 2rem;
+      margin-left: 1rem;
     }
   }
 
@@ -156,16 +150,36 @@ onUnmounted(() => {
     border-radius: 0 50px 50px 0;
     box-shadow: 0 8px 40px #00000033;
     white-space: nowrap;
+    transition: all 0.2s ease;
 
     @include tablet {
+      background: $color-oscuro;
+      flex-direction: column;
       gap: 1.5rem;
       padding: 1.2rem 2rem;
     }
+
+    @include tablet-horizontal {
+      flex-direction: column; 
+      gap: 1.8rem;            
+      padding: 1.8rem 2.5rem;
+      max-height: 80vh;       
+      overflow-y: auto;
+    }
+
     @include celular {
       flex-direction: column; 
       gap: 1.2rem;
       padding: 1.5rem 2.5rem;
       border-radius: 0 30px 30px 0;
+      background: $color-oscuro;
+    }
+
+    @include celular-horizontal {
+      gap: 0.6rem;
+      padding: 1rem 2rem;
+      max-height: 75vh;
+      overflow-y: auto;
     }
 
     a {
@@ -189,6 +203,18 @@ onUnmounted(() => {
       
       @include celular {
         font-size: 1.1rem;
+      }
+
+      @include celular-horizontal {
+        font-size: 0.95rem;
+      }
+
+      @include tablet {
+        font-size: 1.25rem;
+      }
+
+      @include tablet-horizontal {
+        font-size: 1.25rem;
       }
     }
   }
