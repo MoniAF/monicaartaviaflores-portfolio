@@ -71,7 +71,7 @@ h3 {
     margin-left: 2rem;
     padding-top: 2rem;
   }
-  @include celular {
+  @include mobile {
     font-size: 28px;
     margin-left: 1.5rem;
     padding-top: 1.5rem;
@@ -92,7 +92,7 @@ h3 {
     margin-left: 2rem;
     margin-right: 2rem;
   }
-  @include celular {
+  @include mobile {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
   }
@@ -121,7 +121,7 @@ h3 {
       max-width: 550px;
       margin-top: 2rem;
     }
-    @include celular {
+    @include mobile {
       border-radius: 30px;
       padding: 1.8rem 1rem;
     }
@@ -137,7 +137,7 @@ h3 {
     color: $color-blanco;
     text-transform: uppercase;
 
-    @include celular {
+    @include mobile {
       font-size: 1.25rem;
     }
     @include desktop {
@@ -151,7 +151,7 @@ h3 {
     color: $color-rosa;
     padding-bottom: 0.5rem;
 
-    @include celular {
+    @include mobile {
       font-size: 1rem;
     }
     @include desktop {
@@ -190,7 +190,7 @@ h3 {
     width: 5rem;
     height: auto;
 
-    @include celular {
+    @include mobile {
       width: 3.5rem;
     }
     @include desktop {
@@ -202,7 +202,7 @@ h3 {
     width: 4.6rem;
     height: auto;
 
-    @include celular {
+    @include mobile {
       width: 3.1rem;
     }
     @include desktop {

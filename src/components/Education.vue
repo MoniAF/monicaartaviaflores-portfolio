@@ -106,7 +106,7 @@ h3 {
     @include tablet {
       width: 280px;
     }
-    @include celular {
+    @include mobile {
       width: 100%;
       max-width: 260px;
     }
@@ -155,7 +155,7 @@ h4, h5, h6 {
     line-height: 28px;
   }
   
-  @include celular {
+  @include mobile {
     font-size: 14px;
     line-height: 18px;
   }

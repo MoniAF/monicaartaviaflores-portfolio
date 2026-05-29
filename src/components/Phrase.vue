@@ -24,7 +24,7 @@
     line-height: 60px;
   }
 
-  @include celular {
+  @include mobile {
     min-height: auto;
     font-size: 55px;
     line-height: 45px;
@@ -36,7 +36,7 @@
     width: 43%;
     height: auto;
 
-    @include celular {
+    @include mobile {
       width: 90%;
       margin-top: 1.5rem;
     }
@@ -56,7 +56,7 @@
     padding-left: 2.5rem;
     color: $color-blanco;
 
-    @include celular {
+    @include mobile {
       padding-left: 1.3rem;
       margin-top: 0.5rem;
     }

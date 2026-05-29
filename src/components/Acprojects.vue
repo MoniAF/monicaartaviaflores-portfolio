@@ -96,7 +96,7 @@ h3 {
     margin-left: 2rem;
     padding-top: 2rem;
   }
-  @include celular {
+  @include mobile {
     font-size: 1.75rem;
     margin-left: 1.5rem;
     padding-top: 1.5rem;
@@ -121,7 +121,7 @@ h3 {
     padding-left: 2rem;
     padding-right: 2rem;
   }
-  @include celular {
+  @include mobile {
     flex-direction: column !important;
     align-items: center;
     gap: 4rem;
@@ -145,7 +145,7 @@ h3 {
     @include tablet {
       width: 45%;
     }
-    @include celular {
+    @include mobile {
       width: 100%;
       max-width: 280px;
     }

@@ -31,13 +31,13 @@
       justify-content: flex-end;
       padding-top: 15px;
 
-      @include celular {
+      @include mobile {
         padding-top: 2rem;
       }
     }
 
     &.jc-s {
-      @include celular {
+      @include mobile {
         padding-bottom: 6rem;
       }
     }
@@ -46,7 +46,7 @@
   .branchwidth {
     width: 38%;
     
-    @include celular {
+    @include mobile {
       width: 75%;
     }
   }
@@ -65,7 +65,7 @@
     line-height: 1;
 
     @include tablet { font-size: 70px; }   
-    @include celular { font-size: 45px; }  
+    @include mobile { font-size: 45px; }  
     @include desktop { font-size: 120px; } 
   }
 
@@ -76,7 +76,7 @@
     color: $color-blanco;
 
     @include tablet { font-size: 30px; }
-    @include celular { font-size: 20px; letter-spacing: 2px; }
+    @include mobile { font-size: 20px; letter-spacing: 2px; }
     @include desktop { font-size: 55px; }
   }
 
@@ -91,7 +91,7 @@
       margin-left: 3rem;
     }
 
-    @include celular {
+    @include mobile {
       width: 15%;
       margin-top: 12rem;
       margin-left: 3rem;

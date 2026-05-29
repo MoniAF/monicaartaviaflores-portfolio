@@ -10,7 +10,7 @@
     width: 100%;
     height: 16.7vh;
 
-    @include celular {
+    @include mobile {
         height: 10vh;
     }
 

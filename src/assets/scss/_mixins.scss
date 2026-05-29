@@ -1,11 +1,11 @@
 @use '@/assets/scss/variables.scss' as *;
 @forward '@/assets/scss/variables.scss';
 
-@mixin celular {
-  @media (max-width: #{$breakpoint-celular}) { @content; }
+@mixin mobile {
+  @media (max-width: #{$breakpoint-mobile}) { @content; }
 }
 
-@mixin celular-horizontal {
+@mixin mobile-landscape {
   @media (orientation: landscape) and (max-height: 480px) { @content; }
 }
 
@@ -13,7 +13,7 @@
   @media (max-width: #{$breakpoint-tablet}) { @content; }
 }
 
-@mixin tablet-horizontal {
+@mixin tablet-landscape {
   @media (orientation: landscape) and (max-height: 850px) { @content; }
 }
 
@@ -40,16 +40,16 @@ h3 {
   @include tablet {
     
   }
-  @include celular {
+  @include mobile {
     
   }
 
   //MIXINS DE ORIENTACIÓN
-  @include tablet-horizontal {
+  @include tablet-landscape {
     font-size: 1.15rem;
   }
 
-  @include celular-horizontal {
+  @include mobile-landscape {
     font-size: 0.95rem;
   }
 }

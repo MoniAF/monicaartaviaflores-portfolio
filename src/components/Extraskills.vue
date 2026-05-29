@@ -36,7 +36,7 @@
     margin-right: 2rem;
     align-items: center;
   }
-  @include celular {
+  @include mobile {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
     flex-direction: column !important;
@@ -51,7 +51,7 @@
     @include tablet {
       width: 23%;
     }
-    @include celular {
+    @include mobile {
       width: 100%;
       height: auto;
     }
@@ -62,7 +62,7 @@
     }
 
     &.align-items-center {
-      @include celular {
+      @include mobile {
         display: none !important;
       }
     }
@@ -75,7 +75,7 @@
     @include tablet {
       margin-top: 12rem;
     }
-    @include celular {
+    @include mobile {
       margin-top: 0;
     }
     @include desktop {
@@ -95,7 +95,7 @@
     font-size: 4rem;
     margin-bottom: 0.5rem;
 
-    @include celular {
+    @include mobile {
       font-size: 3.2rem;
     }
     @include desktop {

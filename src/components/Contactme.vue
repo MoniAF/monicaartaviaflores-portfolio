@@ -58,7 +58,7 @@ h3 {
     font-size: 2rem;
     margin-left: 2rem;
   }
-  @include celular {
+  @include mobile {
     font-size: 1.75rem;
     margin-left: 0;
     text-align: center;
@@ -81,7 +81,7 @@ h3 {
   width: 57%;
   height: auto;
 
-  @include celular {
+  @include mobile {
     display: none !important;
   }
 }
@@ -135,7 +135,7 @@ h3 {
 }
 
 .cm-box .d-flex.justify-content-center.align-items-center {
-  @include celular {
+  @include mobile {
     position: relative;
     
     .position-absolute {

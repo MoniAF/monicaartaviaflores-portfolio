@@ -74,7 +74,7 @@ const currentProject = projects[route.params.name]
   .branchwidth {
     width: 38%;
 
-    @include celular {
+    @include mobile {
       width: 50%;
       opacity: 0.4;
     }
@@ -107,7 +107,7 @@ const currentProject = projects[route.params.name]
     @include tablet {
       font-size: 5rem;
     }
-    @include celular {
+    @include mobile {
       font-size: 3.75rem;
       line-height: 1.2;
     }
@@ -123,7 +123,7 @@ const currentProject = projects[route.params.name]
     font-size: 1.25rem;
     color: $color-blanco;
 
-    @include celular {
+    @include mobile {
       font-size: 1rem;
       margin-top: 1rem !important;
     }
@@ -141,7 +141,7 @@ const currentProject = projects[route.params.name]
       margin-left: 4rem; 
       width: 10%;
     }
-    @include celular {
+    @include mobile {
       display: none !important;
     }
   }

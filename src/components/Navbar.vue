@@ -136,7 +136,7 @@ onUnmounted(() => {
       transform: scale(1.05);
     }
 
-    @include celular {
+    @include mobile {
       //width: 4rem;
       //height: 4rem;
       font-size: 2rem;
@@ -161,7 +161,7 @@ onUnmounted(() => {
       padding: 1.2rem 2rem;
     }
 
-    @include tablet-horizontal {
+    @include tablet-landscape {
       flex-direction: column; 
       gap: 1.8rem;            
       padding: 1.8rem 2.5rem;
@@ -169,7 +169,7 @@ onUnmounted(() => {
       overflow-y: auto;
     }
 
-    @include celular {
+    @include mobile {
       flex-direction: column; 
       gap: 1.2rem;
       padding: 1.5rem 2.5rem;
@@ -177,7 +177,7 @@ onUnmounted(() => {
       background: $color-oscuro;
     }
 
-    @include celular-horizontal {
+    @include mobile-landscape {
       gap: 0.6rem;
       padding: 1rem 2rem;
       max-height: 75vh;
@@ -203,11 +203,11 @@ onUnmounted(() => {
         transform: scale(1.05);
       }
       
-      @include celular {
+      @include mobile {
         font-size: 1.1rem;
       }
 
-      @include celular-horizontal {
+      @include mobile-landscape {
         font-size: 0.95rem;
       }
 
@@ -215,7 +215,7 @@ onUnmounted(() => {
         font-size: 1.25rem;
       }
 
-      @include tablet-horizontal {
+      @include tablet-landscape {
         font-size: 1.25rem;
       }
     }

@@ -30,13 +30,13 @@ h3 {
   width: 100%;
   min-height: 100vh;
 
-  @include celular {
+  @include mobile {
     display: block !important;
     min-height: auto;
   }
 
     .am-extrac {
-      @include celular {
+      @include mobile {
         flex-direction: column !important;
       }
     }
@@ -57,7 +57,7 @@ h3 {
       padding: 0;
     }
 
-    @include celular {
+    @include mobile {
       width: 100%;
       background-color: $color-crema;
       padding-top: 1.5rem;
@@ -85,7 +85,7 @@ h3 {
     line-height: 23px;
     color: $color-oscuro;
 
-    @include celular {
+    @include mobile {
       width: auto;
       //font-size: 17px;
       //line-height: 26px;
@@ -105,7 +105,7 @@ h3 {
     position: relative;
     width: 39%;
 
-    @include celular {
+    @include mobile {
       width: 100%;
       //margin-top: 0rem;
       display: flex;
@@ -117,7 +117,7 @@ h3 {
     width: 100%;
     display: block;
 
-    @include celular {
+    @include mobile {
       width: 90%;
     }
   }
@@ -133,7 +133,7 @@ h3 {
       width: 65%;
       margin-left: 3rem;
 
-      @include celular {
+      @include mobile {
         width: 55%;
         margin-left: 5rem;
       }

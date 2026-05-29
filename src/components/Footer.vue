@@ -11,7 +11,7 @@
   width: 100%;
   height: 16.7vh;
 
-  @include celular {
+  @include mobile {
     padding-left: 1rem;
     padding-right: 1rem;
     text-align: center;

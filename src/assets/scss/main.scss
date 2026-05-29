@@ -41,7 +41,7 @@ h3 {
     padding-top: 2rem;
   }
 
-  @include celular {
+  @include mobile {
     position: relative;
     font-size: 35px;
     margin-left: 1.5rem;
