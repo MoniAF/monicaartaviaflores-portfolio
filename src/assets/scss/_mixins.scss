@@ -24,3 +24,33 @@
 @mixin desktop {
   @media (min-width: #{$breakpoint-desktop}) { @content; }
 }
+
+/*
+h3 {
+  // 1. ESTILOS BASE
+  font-size: 1.25rem; 
+  line-height: 1.5rem;
+
+  @include laptop { 
+    
+  }
+  @include desktop { 
+    
+  }
+  @include tablet {
+    
+  }
+  @include celular {
+    
+  }
+
+  //MIXINS DE ORIENTACIÓN
+  @include tablet-horizontal {
+    font-size: 1.15rem;
+  }
+
+  @include celular-horizontal {
+    font-size: 0.95rem;
+  }
+}
+  */

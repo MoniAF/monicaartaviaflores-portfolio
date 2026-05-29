@@ -23,37 +23,7 @@
 @use '@/assets/scss/mixins.scss' as *;
 
 h3 {
-  position: absolute;
-  margin-left: 4.5rem;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 42px;
   color: $color-crema; 
-  text-shadow: 5px 4px 0 $color-oscuro; 
-  letter-spacing: 0;
-  padding-top: 3rem;
-
-  @include tablet {
-    position: relative;
-    font-size: 32px;
-    margin-left: 2rem;
-    padding-top: 2rem;
-  }
-
-  @include celular {
-    position: relative;
-    font-size: 35px;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-    text-align: center;
-    padding-top: 1.5rem;
-    margin-bottom: 2.5rem;
-  }
-
-  @include desktop {
-    font-size: 55px;
-    padding-top: 4rem;
-  }
 }
 
 .container-am {

@@ -14,17 +14,22 @@
   line-height: 85px;
   text-align: center;
 
+  @include desktop {
+    font-size: 120px;
+    line-height: 100px;
+  }
+
   @include tablet {
     font-size: 70px;
     line-height: 60px;
   }
+
   @include celular {
-    font-size: 45px;
-    line-height: 40px;
-  }
-  @include desktop {
-    font-size: 120px;
-    line-height: 100px;
+    min-height: auto;
+    font-size: 55px;
+    line-height: 45px;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
   }
 
   img {
@@ -32,7 +37,7 @@
     height: auto;
 
     @include celular {
-      width: 70%;
+      width: 90%;
       margin-top: 1.5rem;
     }
   }
@@ -52,8 +57,7 @@
     color: $color-blanco;
 
     @include celular {
-      padding-left: 0;
-      display: block;
+      padding-left: 1.3rem;
       margin-top: 0.5rem;
     }
   }
