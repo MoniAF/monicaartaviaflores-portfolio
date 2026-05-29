@@ -5,7 +5,9 @@
         <div class="boxsk-cards d-flex justify-content-between">
 
             <div class="card-boxsk">
-                <section class="subtitle-box"></section>
+                <section class="subtitle-box">
+                  <p class="d-mbtb">TECHNICAL SKILLS</p>
+                </section>
                 <section class="mt-sk">
                     <div class="tscard-container d-flex flex-column justify-content-between gap-5">
                         <section class="ts-cardbox">
@@ -31,7 +33,7 @@
 
             <div class="card-boxsk">
                 <section class="subtitle-box">
-                    <p>TECHNICAL SKILLS</p>
+                    <p class="d-dtlt">TECHNICAL SKILLS</p>
                 </section>
 
                 <section class="mt-sk">
@@ -154,7 +156,7 @@ h3 {
   @include celular {
     flex-direction: column !important;
     align-items: center;
-    gap: 4rem;
+    gap: 2rem;
   }
 
   .card-boxsk {
@@ -164,8 +166,7 @@ h3 {
       width: 45%;
     }
     @include celular {
-      width: 100%;
-      max-width: 300px;
+      width: 85%;
     }
   }
 
@@ -185,6 +186,29 @@ h3 {
     @include desktop {
       height: 6rem;
       font-size: 30px;
+    }
+  }
+
+  .d-mbtb{
+    display: none;
+    margin-bottom: 2.5rem;
+
+    @include tablet {
+      display: block;
+    }
+    @include celular {
+      display: block;
+    }
+  }
+
+  .d-dtlt{
+    display: block;
+
+    @include tablet {
+      display: none;
+    }
+    @include celular {
+      display: none;
     }
   }
 
@@ -300,6 +324,10 @@ h3 {
       width: 5.8rem;
       margin-top: -2.2rem;
       margin-right: -2.4rem;
+    }
+
+    @include celular {
+      display: none;
     }
   }
 }
