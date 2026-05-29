@@ -2,7 +2,7 @@
     <div id="about">
         <h3>ABOUT ME</h3>
         <div class="container-am d-flex flex-column justify-content-center">
-            <div class="d-flex justify-content-between align-items-center">
+            <div class="am-extrac d-flex justify-content-between align-items-center">
                 <div class="box-am ps-5 pe-5" >
                     <section class="txt-am d-flex align-items-center">
                         <p class="m-0">Graduate in Computer Science and Multimedia Technology, with a focus on web development and database administration. Experienced in developing applications using C# and .NET, building APIs, and managing both relational (Oracle and SQL Server) and non-relational databases (MongoDB). Focused on creating efficient, scalable solutions that improve user experience, while following best development practices and prioritizing performance and maintainability. Interested in joining a team where I can apply my skills and contribute to team growth.</p>
@@ -34,14 +34,17 @@ h3 {
   padding-top: 3rem;
 
   @include tablet {
+    position: relative;
     font-size: 32px;
     margin-left: 2rem;
     padding-top: 2rem;
   }
   @include celular {
-    font-size: 26px;
+    position: relative;
+    font-size: 35px;
     margin-left: 1.5rem;
     padding-top: 1.5rem;
+    margin-bottom: 1.5rem;
   }
   @include desktop {
     font-size: 55px;
@@ -52,6 +55,16 @@ h3 {
 .container-am {
   width: 100%;
   min-height: 100vh;
+
+  @include celular {
+    display: block !important;
+  }
+
+    .am-extrac {
+      @include celular {
+        flex-direction: column !important;
+      }
+    }
 
   .box-am {
     width: 52%;
@@ -68,6 +81,23 @@ h3 {
       background-image: none;
       padding: 0;
     }
+
+    @include celular {
+      width: 100%;
+      background-color: $color-crema;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+      box-shadow: inset 0 0 15px #a58862;
+      margin-bottom: 4rem;
+
+      &.ps-5{
+        padding-left: 0 !important;
+      }
+
+      &.pe-5{
+        padding-right: 0 !important;
+      }
+    }
   }
 
   .txt-am {
@@ -78,6 +108,15 @@ h3 {
     font-weight: 400;
     letter-spacing: 0;
     line-height: 23px;
+    color: $color-oscuro;
+
+    @include celular {
+      width: auto;
+      font-size: 20px;
+      line-height: 26px;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
 
     @include desktop {
       font-size: 24px;
@@ -90,11 +129,22 @@ h3 {
   .fl-am {
     position: relative;
     width: 39%;
+
+    @include celular {
+      width: 100%;
+      margin-top: 2rem;
+      display: flex;
+      justify-content: end;
+    }
   }
 
   .flower-img {
     width: 100%;
     display: block;
+
+    @include celular {
+      width: 90%;
+    }
   }
 
   .girl-am {
@@ -107,6 +157,11 @@ h3 {
     img {
       width: 65%;
       margin-left: 3rem;
+
+      @include celular {
+        width: 55%;
+        margin-left: 5rem;
+      }
     }
   }
 }
