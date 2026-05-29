@@ -12,6 +12,7 @@
   height: 16.7vh;
 
   @include mobile {
+    height: 10vh;
     padding-left: 1rem;
     padding-right: 1rem;
     text-align: center;

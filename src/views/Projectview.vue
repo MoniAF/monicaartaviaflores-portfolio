@@ -1,5 +1,6 @@
 <script setup>
 import Navbar from '../components/Navbar.vue';
+import Footer from '@/components/Footer.vue';
 import { useRoute } from 'vue-router';
 
 const route = useRoute()
@@ -39,7 +40,7 @@ const currentProject = projects[route.params.name]
         <div class="img-container jc-e">
             <img src="../assets/img/branch1right.svg" class="branchwidth" alt="branchright">
         </div>
-        <div class="img-container">
+        <div class="img-container jc-s">
             <img src="../assets/img/branch1left.svg" class="branchwidth" alt="branchleft">
         </div>
         <div class="position-absolute z-1 top-0 txt-container d-flex justify-content-center align-items-center">
@@ -49,6 +50,9 @@ const currentProject = projects[route.params.name]
             </Div>
         </div>
         <img class="position-absolute z-2 top-0 m-fw1" src="../assets/img/flowers1.svg" alt="flowers1">
+        <section class="position-absolute z-3 bottom-0 w-100">
+          <Footer />
+        </section>
     </div>
 
 </template>
@@ -69,14 +73,19 @@ const currentProject = projects[route.params.name]
       justify-content: end;
       padding-top: 15px;
     }
+
+    &.jc-s {
+      @include mobile {
+        padding-bottom: 6rem;
+      }
+    }
   }
 
   .branchwidth {
     width: 38%;
 
     @include mobile {
-      width: 50%;
-      opacity: 0.4;
+      width: 75%;
     }
   }
 
@@ -143,11 +152,15 @@ const currentProject = projects[route.params.name]
     margin-left: 8.5rem;
 
     @include tablet {
-      margin-left: 4rem; 
-      width: 10%;
+      width: 12%;
+      margin-top: 4rem;
+      margin-left: 3rem;
     }
+
     @include mobile {
-      display: none !important;
+      width: 15%;
+      margin-top: 12rem;
+      margin-left: 3rem;
     }
   }
 }
