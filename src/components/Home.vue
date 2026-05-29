@@ -32,13 +32,13 @@
       padding-top: 15px;
 
       @include celular {
-        padding-top: 4rem;
+        padding-top: 2rem;
       }
     }
 
     &.jc-s {
       @include celular {
-        padding-bottom: 4rem;
+        padding-bottom: 6rem;
       }
     }
   }
@@ -93,7 +93,7 @@
 
     @include celular {
       width: 15%;
-      margin-top: 15.5rem;
+      margin-top: 12rem;
       margin-left: 3rem;
     }
   }
