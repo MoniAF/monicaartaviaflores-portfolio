@@ -68,7 +68,10 @@ h3 {
     }
 
     @include mobile {
+      background-image: none;
       width: 100%;
+      height: auto;
+      margin-top: 0;
       background-color: $color-crema;
       padding-top: 1.5rem;
       padding-bottom: 1.5rem;
@@ -100,6 +103,7 @@ h3 {
     }
 
     @include mobile {
+      font-size: 17px;
       width: auto;
       padding-left: 1.5rem;
       padding-right: 1.5rem;

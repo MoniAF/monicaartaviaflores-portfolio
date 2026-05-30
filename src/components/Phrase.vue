@@ -20,8 +20,11 @@
   }
 
   @include tablet {
+    min-height: auto;
     font-size: 70px;
     line-height: 60px;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
   }
 
   @include mobile {

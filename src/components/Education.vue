@@ -49,6 +49,14 @@ import Circle from '../assets/img/circle.svg';
 .container-ed {
   min-height: 100vh;
   display: block;
+
+  @include tablet {
+    min-height: auto;
+  }
+
+  @include mobile {
+    min-height: auto;
+  }
 }
 
 h3 {
@@ -59,12 +67,18 @@ h3 {
   width: 100%;
   height: 30rem;
 
-  @include desktop {
-    height: 45rem;
-  }
   @include tablet {
     height: auto;
-    padding: 0 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  @include mobile {
+    height: auto;
+    margin-bottom: 4rem;
+  }
+
+  @include desktop {
+    height: 45rem;
   }
 
   .branch-ed {
@@ -77,8 +91,13 @@ h3 {
     }
 
     @include tablet {
+      width: 22%;
+    }
+
+    @include mobile {
       display: none;
     }
+
   }
 
   .card-space-ed {
@@ -92,10 +111,16 @@ h3 {
 
     @include tablet {
       width: 100%;
-      flex-direction: column !important;
       align-items: center;
       gap: 2rem !important;
       margin-bottom: 3rem;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      width: 100%; 
+      margin-bottom: 0;
+      gap: 2rem !important;
     }
   }
 
@@ -104,8 +129,9 @@ h3 {
     position: relative;
 
     @include tablet {
-      width: 280px;
+      width: 45%;
     }
+
     @include mobile {
       width: 100%;
       max-width: 260px;
@@ -153,6 +179,11 @@ h4, h5, h6 {
    @include desktop {
     font-size: 23px;
     line-height: 28px;
+  }
+
+  @include tablet {
+    font-size: 15px;
+    line-height: 18px;
   }
   
   @include mobile {
