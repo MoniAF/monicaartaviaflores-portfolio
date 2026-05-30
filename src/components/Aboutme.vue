@@ -30,12 +30,20 @@ h3 {
   width: 100%;
   min-height: 100vh;
 
+  @include tablet {
+    display: block !important;
+    min-height: auto;
+  }
+
   @include mobile {
     display: block !important;
     min-height: auto;
   }
 
     .am-extrac {
+      @include tablet {
+        flex-direction: column !important;
+      }
       @include mobile {
         flex-direction: column !important;
       }
@@ -50,11 +58,13 @@ h3 {
     background-repeat: no-repeat;
 
     @include tablet {
-      width: 90%;
-      height: auto;
+      width: 100%;
+      height: 30vh;
+      margin-top: 1.5rem;
       margin-left: 0;
-      background-image: none;
-      padding: 0;
+      padding-left: 5.5rem !important;
+      padding-right: 5.5rem !important;
+      margin-bottom: 3rem;
     }
 
     @include mobile {
@@ -85,10 +95,12 @@ h3 {
     line-height: 23px;
     color: $color-oscuro;
 
+    @include tablet {
+      font-size: 18px;
+    }
+
     @include mobile {
       width: auto;
-      //font-size: 17px;
-      //line-height: 26px;
       padding-left: 1.5rem;
       padding-right: 1.5rem;
     }
@@ -105,9 +117,12 @@ h3 {
     position: relative;
     width: 39%;
 
+    @include tablet {
+      display: none;
+    }
+
     @include mobile {
       width: 100%;
-      //margin-top: 0rem;
       display: flex;
       justify-content: end;
     }

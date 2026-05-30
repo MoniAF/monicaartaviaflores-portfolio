@@ -136,9 +136,14 @@ onUnmounted(() => {
       transform: scale(1.05);
     }
 
+    @include tablet {
+      font-size: 2.3rem;
+      width: 5rem;
+      height: 5rem;
+      margin-left: 1rem;
+    }
+
     @include mobile {
-      //width: 4rem;
-      //height: 4rem;
       font-size: 2rem;
       margin-left: 1rem;
     }

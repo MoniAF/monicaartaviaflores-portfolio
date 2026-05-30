@@ -31,12 +31,20 @@
       justify-content: flex-end;
       padding-top: 15px;
 
+      @include tablet {
+        padding-top: 3rem;
+      }
+
       @include mobile {
         padding-top: 2rem;
       }
     }
 
     &.jc-s {
+      @include tablet {
+        padding-bottom: 5rem; 
+      }
+
       @include mobile {
         padding-bottom: 6rem;
       }
@@ -45,6 +53,10 @@
 
   .branchwidth {
     width: 38%;
+
+    @include tablet {
+      width: 55%;
+    }
     
     @include mobile {
       width: 75%;
@@ -62,11 +74,17 @@
     font-style: normal;
     font-size: 100px;
     color: $color-rosa;          
-    line-height: 1;
+    line-height: 1.2;
 
-    @include tablet { font-size: 70px; }   
-    @include mobile { font-size: 45px; }  
-    @include desktop { font-size: 120px; } 
+    @include tablet { 
+      font-size: 5rem; 
+    }   
+    @include mobile { 
+      font-size: 45px; 
+    }  
+    @include desktop { 
+      font-size: 120px; 
+    } 
   }
 
   .subtitle-position {
@@ -75,9 +93,16 @@
     font-size: 45px;
     color: $color-blanco;
 
-    @include tablet { font-size: 30px; }
-    @include mobile { font-size: 20px; letter-spacing: 2px; }
-    @include desktop { font-size: 55px; }
+    @include tablet { 
+      font-size: 2.2rem; 
+    }
+    @include mobile { 
+      font-size: 20px; 
+      letter-spacing: 2px; 
+    }
+    @include desktop { 
+      font-size: 55px; 
+    }
   }
 
   .m-fw1 {
@@ -86,9 +111,9 @@
     margin-left: 8.5rem;
 
     @include tablet {
-      width: 12%;
-      margin-top: 4rem;
-      margin-left: 3rem;
+      width: 15%;
+      margin-top: 10rem;
+      margin-left: 5rem;
     }
 
     @include mobile {
