@@ -143,6 +143,13 @@ onUnmounted(() => {
       margin-left: 1rem;
     }
 
+    @include tablet-landscape {
+      font-size: 2.3rem;
+      width: 5rem;
+      height: 5rem;
+      margin-left: 1rem;
+    }
+
     @include mobile {
       font-size: 1.75rem;
       margin-left: 1rem;

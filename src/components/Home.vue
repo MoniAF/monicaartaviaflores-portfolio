@@ -35,6 +35,10 @@
         padding-top: 3rem;
       }
 
+      @include tablet-landscape {
+        padding-top: 2rem;
+      }
+
       @include mobile {
         padding-top: 2rem;
       }
@@ -51,6 +55,10 @@
     &.jc-s {
       @include tablet {
         padding-bottom: 5rem; 
+      }
+
+      @include tablet-landscape {
+        padding-bottom: 4rem;
       }
 
       @include mobile {
@@ -72,6 +80,10 @@
 
     @include tablet {
       width: 55%;
+    }
+
+    @include tablet-landscape {
+      width: 40%;
     }
     
     @include mobile {
@@ -104,6 +116,10 @@
       font-size: 5rem; 
     }
 
+    @include tablet-landscape {
+      font-size: 6rem;
+    }
+
     @include mobile { 
       font-size: 45px; 
     }
@@ -126,13 +142,20 @@
     @include tablet { 
       font-size: 2.2rem; 
     }
+
+    @include tablet-landscape {
+      font-size: 2.8rem;
+    }
+
     @include mobile { 
       font-size: 20px; 
       letter-spacing: 2px; 
     }
+
     @include mobile-landscape { 
       font-size: 25px; 
     }
+
     @include desktop { 
       font-size: 3.5rem; 
     }
@@ -147,6 +170,12 @@
       width: 15%;
       margin-top: 10rem;
       margin-left: 5rem;
+    }
+
+    @include tablet-landscape {
+      width: 8%;
+      margin-top: 4rem;
+      margin-left: 6rem;
     }
 
     @include mobile {
