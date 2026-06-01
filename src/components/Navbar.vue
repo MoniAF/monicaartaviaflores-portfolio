@@ -144,8 +144,17 @@ onUnmounted(() => {
     }
 
     @include mobile {
-      font-size: 2rem;
+      font-size: 2.25rem;
       margin-left: 1rem;
+      width: 4.5rem;
+      height: 4.5rem;
+    }
+
+    @include mobile-landscape {
+      font-size: 2.25rem;
+      margin-left: 1rem;
+      width: 4.5rem;
+      height: 4.5rem;
     }
   }
 
@@ -183,9 +192,9 @@ onUnmounted(() => {
     }
 
     @include mobile-landscape {
-      gap: 0.6rem;
+      gap: 1rem;
       padding: 1rem 2rem;
-      max-height: 75vh;
+      max-height: 90vh;
       overflow-y: auto;
     }
 
@@ -207,20 +216,20 @@ onUnmounted(() => {
         font-weight: 500;
         transform: scale(1.05);
       }
-      
-      @include mobile {
-        font-size: 1.1rem;
-      }
-
-      @include mobile-landscape {
-        font-size: 0.95rem;
-      }
 
       @include tablet {
         font-size: 1.25rem;
       }
 
       @include tablet-landscape {
+        font-size: 1.25rem;
+      }
+      
+      @include mobile {
+        font-size: 1.25rem;
+      }
+
+      @include mobile-landscape {
         font-size: 1.25rem;
       }
     }
