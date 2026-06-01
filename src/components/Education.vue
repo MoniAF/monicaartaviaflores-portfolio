@@ -57,6 +57,10 @@ import Circle from '../assets/img/circle.svg';
   @include mobile {
     min-height: auto;
   }
+
+  @include mobile-landscape {
+    min-height: auto;
+  }
 }
 
 h3 {
@@ -73,6 +77,11 @@ h3 {
   }
 
   @include mobile {
+    height: auto;
+    margin-bottom: 4rem;
+  }
+
+  @include mobile-landscape {
     height: auto;
     margin-bottom: 4rem;
   }
@@ -96,6 +105,10 @@ h3 {
 
     @include mobile {
       display: none;
+    }
+
+    @include mobile-landscape {
+      width: 18%;
     }
 
   }
@@ -122,6 +135,12 @@ h3 {
       margin-bottom: 0;
       gap: 2rem !important;
     }
+
+    @include mobile-landscape {
+      width: 100%; 
+      margin-bottom: 0;
+      gap: 2rem !important;
+    }
   }
 
   .bxcard-ed {
@@ -133,6 +152,11 @@ h3 {
     }
 
     @include mobile {
+      width: 100%;
+      max-width: 260px;
+    }
+
+    @include mobile-landscape {
       width: 100%;
       max-width: 260px;
     }
@@ -188,6 +212,11 @@ h4, h5, h6 {
   
   @include mobile {
     font-size: 14px;
+    line-height: 18px;
+  }
+
+  @include mobile-landscape {
+    font-size: 15px;
     line-height: 18px;
   }
 }
