@@ -54,7 +54,7 @@
       }
 
       @include mobile-landscape {
-        padding-bottom: 1rem;
+        padding-bottom: 3rem;
       }
     }
   }
