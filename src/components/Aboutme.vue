@@ -23,7 +23,25 @@
 @use '@/assets/scss/mixins.scss' as *;
 
 h3 {
-  color: $color-crema; 
+  position: absolute;
+  z-index: 3;
+  color: $color-crema;
+
+  @include tablet {
+    position: relative;
+  }
+
+  @include tablet-landscape {
+    position: absolute;
+  }
+
+  @include mobile {
+    position: relative;
+  }
+  
+  @include mobile-landscape {
+    position: relative;
+  }
 }
 
 .container-am {
@@ -43,6 +61,10 @@ h3 {
   @include mobile-landscape {
     display: block !important;
     min-height: auto;
+  }
+
+  @include desktop {
+    min-height: 100vh;
   }
 
     .am-extrac {
