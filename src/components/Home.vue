@@ -71,7 +71,7 @@
     }
 
     @include mobile-landscape {
-      width: 35%;
+      width: 25%;
     }
   }
 
@@ -95,7 +95,7 @@
       font-size: 45px; 
     }
     @include mobile-landscape { 
-      font-size: 65px; 
+      font-size: 55px; 
     }
     @include desktop { 
       font-size: 120px; 
@@ -116,7 +116,7 @@
       letter-spacing: 2px; 
     }
     @include mobile-landscape { 
-      font-size: 32px; 
+      font-size: 25px; 
     }
     @include desktop { 
       font-size: 55px; 

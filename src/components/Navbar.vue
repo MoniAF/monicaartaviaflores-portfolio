@@ -146,15 +146,15 @@ onUnmounted(() => {
     @include mobile {
       font-size: 2.25rem;
       margin-left: 1rem;
-      width: 4.5rem;
-      height: 4.5rem;
+      width: 4rem;
+      height: 4rem;
     }
 
     @include mobile-landscape {
       font-size: 2.25rem;
       margin-left: 1rem;
-      width: 4.5rem;
-      height: 4.5rem;
+      width: 4rem;
+      height: 4rem;
     }
   }
 
