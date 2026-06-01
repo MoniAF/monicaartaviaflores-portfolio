@@ -14,6 +14,10 @@
         height: 10vh;
     }
 
+    @include tablet-landscape {
+        height: 10vh;
+    }
+
     @include mobile {
         height: 10vh;
     }

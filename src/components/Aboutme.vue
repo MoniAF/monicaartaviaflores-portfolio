@@ -53,6 +53,10 @@ h3 {
     min-height: auto;
   }
 
+  @include tablet-landscape {
+    min-height: auto;
+  }
+
   @include mobile {
     display: block !important;
     min-height: auto;
@@ -97,6 +101,11 @@ h3 {
       margin-bottom: 3rem;
     }
 
+    @include tablet-landscape {
+      width: 52%;
+      margin-left: 4.5rem !important;
+    }
+
     @include mobile {
       background-image: none;
       width: 100%;
@@ -127,7 +136,7 @@ h3 {
       padding-bottom: 1.5rem;
       box-shadow: inset 0 0 15px #a58862;
       margin-bottom: 3rem;
-      margin-left: 0;
+      margin-left: 0 !important;
      
       &.ps-5{
         padding-left: 4.5rem !important;
@@ -151,6 +160,11 @@ h3 {
 
     @include tablet {
       font-size: 18px;
+    }
+
+    @include tablet-landscape {
+      font-size: 15.5px;
+      line-height: 21px;
     }
 
     @include mobile {
@@ -179,6 +193,12 @@ h3 {
 
     @include tablet {
       display: none;
+    }
+
+    @include tablet-landscape {
+      width: 39%;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
     }
 
     @include mobile {
