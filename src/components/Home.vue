@@ -42,6 +42,10 @@
       @include mobile-landscape {
         padding-top: 1rem;
       }
+
+      @include desktop {
+        padding-top: 2rem;
+      }
     }
 
     &.jc-s {
@@ -55,6 +59,10 @@
 
       @include mobile-landscape {
         padding-bottom: 3rem;
+      }
+
+      @include desktop {
+        padding-bottom: 2rem;
       }
     }
   }
@@ -72,6 +80,10 @@
 
     @include mobile-landscape {
       width: 25%;
+    }
+
+    @include desktop {
+      width: 35%;
     }
   }
 
@@ -91,14 +103,17 @@
     @include tablet { 
       font-size: 5rem; 
     }
+
     @include mobile { 
       font-size: 45px; 
     }
+
     @include mobile-landscape { 
       font-size: 55px; 
     }
+
     @include desktop { 
-      font-size: 120px; 
+      font-size: 8rem; 
     } 
   }
 
@@ -119,7 +134,7 @@
       font-size: 25px; 
     }
     @include desktop { 
-      font-size: 55px; 
+      font-size: 3.5rem; 
     }
   }
 
@@ -144,6 +159,12 @@
       width: 6%;
       margin-top: 3rem;
       margin-left: 5.5rem;
+    }
+
+    @include desktop {
+      width: 7%;
+      margin-top: 7rem;
+      margin-left: 8.5rem;
     }
   }
 }
