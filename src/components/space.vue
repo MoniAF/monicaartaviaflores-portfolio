@@ -18,6 +18,10 @@
         height: 10vh;
     }
 
+    @include mobile-landscape {
+        height: 15vh;
+    }
+
     @include desktop {
         height: 9.8vh;
     }

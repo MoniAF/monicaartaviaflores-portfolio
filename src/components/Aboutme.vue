@@ -40,11 +40,19 @@ h3 {
     min-height: auto;
   }
 
+  @include mobile-landscape {
+    display: block !important;
+    min-height: auto;
+  }
+
     .am-extrac {
       @include tablet {
         flex-direction: column !important;
       }
       @include mobile {
+        flex-direction: column !important;
+      }
+      @include mobile-landscape {
         flex-direction: column !important;
       }
     }
@@ -86,6 +94,27 @@ h3 {
         padding-right: 0 !important;
       }
     }
+
+    @include mobile-landscape{
+      background-image: none;
+      width: 100%;
+      height: auto;
+      margin-top: 0;
+      background-color: $color-crema;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+      box-shadow: inset 0 0 15px #a58862;
+      margin-bottom: 3rem;
+      margin-left: 0;
+     
+      &.ps-5{
+        padding-left: 4.5rem !important;
+      }
+
+      &.pe-5{
+        padding-right: 4.5rem !important;
+      }
+    }
   }
 
   .txt-am {
@@ -109,6 +138,11 @@ h3 {
       padding-right: 1.5rem;
     }
 
+    @include mobile-landscape {
+      font-size: 17px;
+      width: auto;
+    }
+
     @include desktop {
       font-size: 24px;
       line-height: 32px;
@@ -129,6 +163,10 @@ h3 {
       width: 100%;
       display: flex;
       justify-content: end;
+    }
+
+    @include mobile-landscape {
+      display: none;
     }
   }
 
