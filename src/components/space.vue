@@ -6,9 +6,9 @@
 @use '@/assets/scss/mixins.scss' as *;
 
 .space{
-    background-color: $color-blanco;
+    background-color: $color-morado;
     width: 100%;
-    height: 16.7vh;
+    height: 16.5vh;
 
     @include tablet {
         height: 10vh;

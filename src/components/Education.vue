@@ -54,6 +54,10 @@ import Circle from '../assets/img/circle.svg';
     min-height: auto;
   }
 
+  @include tablet-landscape {
+    min-height: auto;
+  }
+
   @include mobile {
     min-height: auto;
   }
@@ -69,9 +73,14 @@ h3 {
 
 .box-content-ed {
   width: 100%;
-  height: 30rem;
+  //height: 30rem;
 
   @include tablet {
+    height: auto;
+    margin-bottom: 2rem;
+  }
+
+  @include tablet-landscape {
     height: auto;
     margin-bottom: 2rem;
   }
@@ -103,6 +112,10 @@ h3 {
       width: 22%;
     }
 
+    @include tablet-landscape {
+      width: 20%;
+    }
+
     @include mobile {
       display: none;
     }
@@ -114,7 +127,7 @@ h3 {
   }
 
   .card-space-ed {
-    width: 56%;
+    width: 50%;
     height: auto;
     margin-bottom: 3.5rem;
 
@@ -123,6 +136,13 @@ h3 {
     }
 
     @include tablet {
+      width: 100%;
+      align-items: center;
+      gap: 2rem !important;
+      margin-bottom: 3rem;
+    }
+
+    @include tablet-landscape {
       width: 100%;
       align-items: center;
       gap: 2rem !important;
@@ -144,11 +164,15 @@ h3 {
   }
 
   .bxcard-ed {
-    width: 36%;
+    width: 42%;
     position: relative;
 
     @include tablet {
       width: 45%;
+    }
+
+    @include tablet-landscape {
+      width: 35%;
     }
 
     @include mobile {
@@ -198,7 +222,7 @@ h4, h5, h6 {
   text-align: center;
   line-height: 23px;
   letter-spacing: 0;
-  font-size: 17px;
+  font-size: 16px;
 
    @include desktop {
     font-size: 23px;
@@ -208,6 +232,10 @@ h4, h5, h6 {
   @include tablet {
     font-size: 15px;
     line-height: 18px;
+  }
+
+  @include tablet-landscape {
+    font-size: 18px;
   }
   
   @include mobile {

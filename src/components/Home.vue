@@ -76,7 +76,7 @@
   }
 
   .branchwidth {
-    width: 38%;
+    width: 35%;
 
     @include tablet {
       width: 55%;

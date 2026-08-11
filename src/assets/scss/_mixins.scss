@@ -14,7 +14,7 @@
 }
 
 @mixin tablet-landscape {
-  @media (orientation: landscape) and (max-height: 850px) { @content; }
+  @media (orientation: landscape) and (max-height: 850px) and (max-width: #{($breakpoint-laptop - 1)}) { @content; }
 }
 
 @mixin laptop {
