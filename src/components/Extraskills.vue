@@ -15,7 +15,10 @@
             <div class="box-txtes">
                 <h6>Certifications</h6>
                 <img class="user-select-none" draggable="false" src="../assets/img/separator.svg" alt="">
-                <p class="txt-lg mt-3 pt-4"> <a href="https://www.credly.com/badges/93b0f923-caab-4509-a1b2-562abdee5c88/public_url">Artificial Intelligence<br>Fundamentals <i class="bi bi-box-arrow-up-right"></i></a><br><span class="txt-lv">IBM SkillsBuild | 2025</span></p> 
+                <p class="txt-lgc mt-3 pt-4"> <a href="https://www.credly.com/badges/93b0f923-caab-4509-a1b2-562abdee5c88/public_url">Artificial Intelligence<br>Fundamentals <i class="bi bi-box-arrow-up-right"></i></a><br><span class="txt-lv">IBM SkillsBuild | 2025</span></p>
+                <p class="txt-lgc mt-0 pt-0"> <a href="https://www.credly.com/badges/4f61fa16-d91d-4568-a1f3-2ccb72010f7b/public_url">Data Analytics<br>Essentials <i class="bi bi-box-arrow-up-right"></i></a><br><span class="txt-lv">Cisco Networking Academy | 2026</span></p>
+                <p class="txt-lgc mt-0 pt-0"> <a href="https://www.credly.com/badges/f845cf06-259e-4126-8dd0-051d6988f51a/public_url">Networking Basics <i class="bi bi-box-arrow-up-right"></i></a><br><span class="txt-lv">Cisco Networking Academy | 2026</span></p>
+                <p class="txt-lgc mt-0 pt-0"> <a href="https://www.credly.com/badges/9e104b58-b7fa-4613-b2f6-07228a37c42f/public_url">Networking Devices and<br>Initial Configuration <i class="bi bi-box-arrow-up-right"></i></a><br><span class="txt-lv">Cisco Networking Academy | 2026</span></p>
             </div>
         </div>
 
@@ -69,7 +72,7 @@
   }
 
   .box-txtes {
-    margin-top: 9.5rem;
+    margin-top: 7rem;
     text-align: center;
 
     @include tablet {
@@ -123,14 +126,38 @@
       }
     }
 
-    i{
-      font-size: 1.3rem;
-      -webkit-text-stroke: 1px;
-    }
-
     @include desktop {
       font-size: 1.8rem;
       line-height: 32px;
+    }
+
+    &:hover {
+      color: $color-rosa;
+    }
+  }
+
+   .txt-lgc {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: $color-crema;
+    line-height: 23px;
+    margin-bottom: 0.45rem;
+
+    i{
+      color: $color-rosa;
+      font-size: 1rem;
+      -webkit-text-stroke: 0.5px;
+    }
+
+    @include desktop {
+      font-size: 1.5rem;
+      line-height: 30px;
+      margin-bottom: 0.75rem;
+
+      i{
+        font-size: 1.5rem;
+        -webkit-text-stroke: 1px;
+      }
     }
 
     &:hover {
