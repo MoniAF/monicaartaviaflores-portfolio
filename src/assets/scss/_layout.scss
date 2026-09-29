@@ -1,0 +1,87 @@
+@use 'tokens' as t;
+@use 'mixins' as m;
+.shell {
+  width: min(100% - 2.5rem, 75rem);
+  margin-inline: auto;
+}
+.section {
+  padding-block: clamp(3.5rem, 7vw, 7rem);
+  scroll-margin-top: 6rem;
+}
+.section--tinted {
+  background: rgba(t.$ink, 0.3);
+}
+.section-heading {
+  margin-bottom: 2rem;
+  display: grid;
+  gap: 1rem;
+  h2 {
+    margin-bottom: 0;
+  }
+  > p {
+    max-width: 26rem;
+  }
+  @include m.from(tablet) {
+    grid-template-columns: 1.4fr 1fr;
+    align-items: end;
+    gap: 3rem;
+  }
+}
+.eyebrow {
+  color: t.$sand;
+  font-size: 0.72rem;
+  line-height: 1.6;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-bottom: 1rem;
+}
+.meta {
+  font-size: 0.85rem;
+  color: t.$muted;
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+.detail-list {
+  padding-left: 1.25rem;
+  color: t.$muted;
+  li {
+    padding-left: 0.35rem;
+    + li {
+      margin-top: 0.7rem;
+    }
+    &::marker {
+      color: t.$pink;
+    }
+  }
+}
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  border-top: 1px solid t.$border;
+  padding-block: 2rem;
+  font-size: 0.75rem;
+  p + p {
+    margin: 0;
+  }
+  span {
+    color: t.$pink;
+  }
+}
+.not-found {
+  min-height: 65svh;
+  h1 {
+    margin-bottom: 1.5rem;
+  }
+  .button {
+    margin-top: 2rem;
+  }
+}

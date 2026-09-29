@@ -1,167 +1,107 @@
 <script setup>
-import Navbar from '../components/Navbar.vue';
-import Footer from '@/components/Footer.vue';
-import { useRoute } from 'vue-router';
-
+import { computed, watch } from 'vue'
+import { useRoute } from 'vue-router'
+import { projects } from '@/data/projects'
+import MediaGallery from '@/components/MediaGallery.vue'
+import ProjectCard from '@/components/ProjectCard.vue'
 const route = useRoute()
-
-const projects = {
-
-    poppycatsitter: {
-        title: 'Poppy Cat Sitter',
-        plink: 'https://github.com/MoniAF/Poppy-Cat-Sitter'
-    },
-
-    bloomrecipes: {
-        title: 'Bloom Recipes',
-        plink: 'https://github.com/MoniAF/BloomRecipesWebsite'
-    },
-
-    bret: {
-        title: 'Bre - T',
-        plink: 'https://github.com/MoniAF/Bre-T-Database'
-    },
-
-    hotelbeach: {
-        title: 'Hotel Beach',
-        plink: 'https://github.com/MoniAF/HotelBeach.NET'
-    }
-
-}
-
-const currentProject = projects[route.params.name]
-
+const project = computed(() => projects.find((item) => item.slug === route.params.name))
+const otherProjects = computed(() =>
+  projects
+    .filter((item) => item.slug !== project.value?.slug)
+    .slice(0, 2)
+    .map((item) => ({ ...item, featured: false }))
+)
+watch(
+  project,
+  (value) => {
+    document.title = `${value?.title || 'Project not found'} | Mónica Artavia Flores`
+  },
+  { immediate: true }
+)
 </script>
 
 <template>
-    <Navbar />
-
-    <div class="container-hm d-flex flex-column justify-content-between">
-        <div class="img-container jc-e">
-            <img src="../assets/img/branch1right.svg" class="branchwidth" alt="branchright">
+  <div v-if="project" class="project-page shell section">
+    <RouterLink class="text-link back-link" to="/#projects">← All projects</RouterLink>
+    <header class="project-heading">
+      <div>
+        <p class="eyebrow">{{ project.eyebrow }}</p>
+        <h1>{{ project.title }}</h1>
+        <p class="project-lead">{{ project.summary }}</p>
+        <div class="actions">
+          <a
+            v-for="(link, index) in project.links"
+            :key="link.url"
+            class="button"
+            :class="index === 0 ? 'button--primary' : 'button--outline'"
+            :href="link.url"
+            target="_blank"
+            rel="noopener noreferrer"
+            >{{ link.label }} ↗</a
+          >
         </div>
-        <div class="img-container jc-s">
-            <img src="../assets/img/branch1left.svg" class="branchwidth" alt="branchleft">
-        </div>
-        <div class="position-absolute z-1 top-0 txt-container d-flex justify-content-center align-items-center">
-            <Div class="text-center">
-                <h1 class="title-name m-0">{{ currentProject.title }}</h1>
-                <p class="subtitle-position m-0">More information about this project <span>coming soon.</span><br>In the meantime, visit my <a class="git-link" :href="currentProject.plink">GitHub Repository <i class="bi bi-box-arrow-up-right"></i></a> for details.</p>
-            </Div>
-        </div>
-        <img class="position-absolute z-2 top-0 m-fw1" src="../assets/img/flowers1.svg" alt="flowers1">
-        <section class="position-absolute z-3 bottom-0 w-100">
-          <Footer />
-        </section>
+      </div>
+      <div class="project-emblem">
+        <img
+          :src="project.screenshots[0]?.src || project.logo"
+          :alt="project.screenshots[0]?.alt || project.logoAlt"
+          :class="{ 'is-screenshot': project.screenshots.length }"
+          width="720"
+          height="450"
+        />
+      </div>
+    </header>
+    <dl class="project-facts">
+      <div>
+        <dt>Focus</dt>
+        <dd>{{ project.role }}</dd>
+      </div>
+      <div>
+        <dt>Period</dt>
+        <dd>{{ project.period }}</dd>
+      </div>
+      <div>
+        <dt>Category</dt>
+        <dd>{{ project.category }}</dd>
+      </div>
+    </dl>
+    <div class="project-overview">
+      <section>
+        <p class="eyebrow">The project</p>
+        <h2>Overview</h2>
+        <p>{{ project.description }}</p>
+        <template v-if="project.contributions.length"
+          ><h3>What the work includes</h3>
+          <ul class="detail-list">
+            <li v-for="point in project.contributions" :key="point">{{ point }}</li>
+          </ul></template
+        ><template v-if="project.evolution"
+          ><h3>From original to remastered</h3>
+          <p>{{ project.evolution }}</p></template
+        >
+        <p v-if="project.note" class="project-note">{{ project.note }}</p>
+      </section>
+      <aside class="technology-panel">
+        <h2>Tools & skills</h2>
+        <ul class="tags">
+          <li v-for="technology in project.technologies" :key="technology">{{ technology }}</li>
+        </ul>
+      </aside>
     </div>
-
+    <MediaGallery :key="project.slug" :images="project.screenshots" :title="project.title" />
+    <section class="more-projects" aria-labelledby="more-title">
+      <p class="eyebrow">Keep exploring</p>
+      <h2 id="more-title">More projects</h2>
+      <div class="project-grid">
+        <ProjectCard v-for="item in otherProjects" :key="item.slug" :project="item" />
+      </div>
+    </section>
+  </div>
+  <section v-else class="section shell not-found">
+    <p class="eyebrow">404</p>
+    <h1>Project not found</h1>
+    <p>This project isn't in the portfolio.</p>
+    <RouterLink class="button button--primary" to="/#projects">Explore projects</RouterLink>
+  </section>
 </template>
-
-<style lang="scss" scoped>
-@use '@/assets/scss/mixins.scss' as *;
-
-.container-hm {
-  min-height: 100vh;
-  position: relative;
-
-  .img-container {
-    width: 100%;
-    height: auto;
-    display: flex;
-
-    &.jc-e {
-      justify-content: end;
-      padding-top: 15px;
-    }
-
-    &.jc-s {
-      @include mobile {
-        padding-bottom: 6rem;
-      }
-    }
-  }
-
-  .branchwidth {
-    width: 38%;
-
-    @include mobile {
-      width: 75%;
-    }
-  }
-
-  .txt-container {
-    width: 100%;
-    height: 100%;
-    padding: 0 1.5rem;
-
-    .git-link {
-      text-decoration: none;
-      color: $color-rosa;
-
-      i {
-        font-size: 1.125rem;
-        -webkit-text-stroke: 0.5px;
-
-        @include mobile {
-            font-size: 0.75rem;
-            -webkit-text-stroke: 0.3px;
-        }
-      }
-    }
-  }
-
-  .title-name {
-    font-family: "Fleur De Leah", cursive;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 6.25rem;
-    color: $color-rosa;
-    line-height: 1.4;
-
-    @include desktop {
-      font-size: 7.5rem;
-      line-height: 1.2;
-    }
-    @include tablet {
-      font-size: 5rem;
-    }
-    @include mobile {
-      font-size: 3.75rem;
-      line-height: 1.2;
-    }
-  }
-
-  .subtitle-position {
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.25rem;
-    color: $color-blanco;
-
-    @include mobile {
-      font-size: 0.8rem;
-      margin-top: 1rem !important;
-    }
-    @include desktop {
-      font-size: 2rem;
-    }
-  }
-
-  .m-fw1 {
-    width: 7%;
-    margin-top: 7rem;
-    margin-left: 8.5rem;
-
-    @include tablet {
-      width: 12%;
-      margin-top: 4rem;
-      margin-left: 3rem;
-    }
-
-    @include mobile {
-      width: 15%;
-      margin-top: 12rem;
-      margin-left: 3rem;
-    }
-  }
-}
-</style>

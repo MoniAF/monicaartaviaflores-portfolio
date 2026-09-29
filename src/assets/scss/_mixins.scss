@@ -1,56 +1,11 @@
-@use '@/assets/scss/variables.scss' as *;
-@forward '@/assets/scss/variables.scss';
-
-@mixin mobile {
-  @media (max-width: #{$breakpoint-mobile}) { @content; }
-}
-
-@mixin mobile-landscape {
-  @media (orientation: landscape) and (max-height: 480px) { @content; }
-}
-
-@mixin tablet {
-  @media (max-width: #{$breakpoint-tablet}) { @content; }
-}
-
-@mixin tablet-landscape {
-  @media (orientation: landscape) and (max-height: 850px) and (max-width: #{($breakpoint-laptop - 1)}) { @content; }
-}
-
-@mixin laptop {
-  @media (min-width: #{$breakpoint-laptop}) { @content; }
-}
-
-@mixin desktop {
-  @media (min-width: #{$breakpoint-desktop}) { @content; }
-}
-
-/*
-h3 {
-  // 1. ESTILOS BASE
-  font-size: 1.25rem; 
-  line-height: 1.5rem;
-
-  @include laptop { 
-    
-  }
-  @include desktop { 
-    
-  }
-  @include tablet {
-    
-  }
-  @include mobile {
-    
-  }
-
-  //MIXINS DE ORIENTACIÓN
-  @include tablet-landscape {
-    font-size: 1.15rem;
-  }
-
-  @include mobile-landscape {
-    font-size: 0.95rem;
+@use 'sass:map';
+@use 'tokens' as t;
+@mixin from($breakpoint) {
+  @media (min-width: map.get(t.$breakpoints, $breakpoint)) {
+    @content;
   }
 }
-  */
+@mixin panel {
+  border: 1px solid t.$border;
+  border-radius: t.$radius;
+}
