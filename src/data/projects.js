@@ -4,9 +4,6 @@ import bretLogo from '@/assets/img/bret.svg'
 import hotelLogo from '@/assets/img/hotelbeach.svg'
 import communityArt from '@/assets/img/flowers3.svg'
 
-// Add real screenshots here: { src: '/images/projects/bloomrecipes/home.webp',
-// alt: 'Bloom Recipes home page with recipe filters', caption: 'Recipe discovery' }.
-// The first screenshot becomes the project card cover. Empty galleries use the original logo.
 export const projects = [
   {
     slug: 'bloomrecipes',
@@ -61,14 +58,14 @@ export const projects = [
         caption: 'Recipe catalog'
       },
       {
-        src: '/images/projects/bloomrecipes/search.png',
-        alt: 'Bloom Recipes search results',
-        caption: 'Search and filtering'
-      },
-      {
         src: '/images/projects/bloomrecipes/details.png',
         alt: 'Bloom Recipes recipe details',
         caption: 'Recipe details'
+      },
+      {
+        src: '/images/projects/bloomrecipes/details-info.png',
+        alt: 'Bloom Recipes recipe details and information',
+        caption: 'Recipe information'
       },
       {
         src: '/images/projects/bloomrecipes/instructions.png',
@@ -101,14 +98,14 @@ export const projects = [
         caption: 'About the project'
       },
       {
+        src: '/images/projects/bloomrecipes/menu.png',
+        alt: 'Bloom Recipes navigation menu',
+        caption: 'Navigation menu'
+      },
+      {
         src: '/images/projects/bloomrecipes/footer-home.png',
         alt: 'Bloom Recipes home page footer',
         caption: 'Homepage footer'
-      },
-      {
-        src: '/images/projects/bloomrecipes/details-info.png',
-        alt: 'Bloom Recipes recipe details and information',
-        caption: 'Recipe information'
       },
       {
         src: '/images/projects/bloomrecipes/details-related.png',
@@ -116,9 +113,19 @@ export const projects = [
         caption: 'Related recipes'
       },
       {
+        src: '/images/projects/bloomrecipes/signup.png',
+        alt: 'Bloom Recipes account registration screen',
+        caption: 'Create an account'
+      },
+      {
         src: '/images/projects/bloomrecipes/login.png',
         alt: 'Bloom Recipes sign-in screen',
         caption: 'Sign in'
+      },
+      {
+        src: '/images/projects/bloomrecipes/search.png',
+        alt: 'Bloom Recipes search results',
+        caption: 'Search and filtering'
       },
       {
         src: '/images/projects/bloomrecipes/profile.png',
@@ -126,19 +133,9 @@ export const projects = [
         caption: 'Signed-in profile'
       },
       {
-        src: '/images/projects/bloomrecipes/menu.png',
-        alt: 'Bloom Recipes navigation menu',
-        caption: 'Navigation menu'
-      },
-      {
         src: '/images/projects/bloomrecipes/hero-message.png',
         alt: 'Bloom Recipes welcome message card',
         caption: 'Welcome message'
-      },
-      {
-        src: '/images/projects/bloomrecipes/signup.png',
-        alt: 'Bloom Recipes account registration screen',
-        caption: 'Create an account'
       },
     ]
   },
@@ -175,9 +172,34 @@ export const projects = [
         caption: 'Public home page'
       },
       {
+        src: '/images/projects/hotelbeach/home-alternate.png',
+        alt: 'Hotel Beach alternate public home page view',
+        caption: 'Homepage view'
+      },
+      {
+        src: '/images/projects/hotelbeach/packages.png',
+        alt: 'Hotel Beach packages page',
+        caption: 'Available packages'
+      },
+      {
+        src: '/images/projects/hotelbeach/home-footer.png',
+        alt: 'Hotel Beach home page footer',
+        caption: 'Homepage footer'
+      },
+      {
         src: '/images/projects/hotelbeach/about.png',
         alt: 'Hotel Beach about page',
         caption: 'About the hotel'
+      },
+      {
+        src: '/images/projects/hotelbeach/about-details.png',
+        alt: 'Hotel Beach additional about page view',
+        caption: 'About page details'
+      },
+      {
+        src: '/images/projects/hotelbeach/about-footer.png',
+        alt: 'Hotel Beach about page footer',
+        caption: 'About page footer'
       },
       {
         src: '/images/projects/hotelbeach/customer-login.png',
@@ -190,29 +212,9 @@ export const projects = [
         caption: 'Customer registration'
       },
       {
-        src: '/images/projects/hotelbeach/packages.png',
-        alt: 'Hotel Beach packages page',
-        caption: 'Available packages'
-      },
-      {
-        src: '/images/projects/hotelbeach/reservations.png',
-        alt: 'Hotel Beach reservations page',
-        caption: 'Reservation management'
-      },
-      {
-        src: '/images/projects/hotelbeach/customers.png',
-        alt: 'Hotel Beach customers administration',
-        caption: 'Customer administration'
-      },
-      {
-        src: '/images/projects/hotelbeach/employees.png',
-        alt: 'Hotel Beach employees administration',
-        caption: 'Employee administration'
-      },
-      {
-        src: '/images/projects/hotelbeach/packages-admin.png',
-        alt: 'Hotel Beach package administration',
-        caption: 'Package administration'
+        src: '/images/projects/hotelbeach/customer-register-details.png',
+        alt: 'Hotel Beach customer registration form details',
+        caption: 'Registration form'
       },
       {
         src: '/images/projects/hotelbeach/staff-login.png',
@@ -220,34 +222,29 @@ export const projects = [
         caption: 'Staff login'
       },
       {
-        src: '/images/projects/hotelbeach/about-details.png',
-        alt: 'Hotel Beach additional about page view',
-        caption: 'About page details'
-      },
-      {
-        src: '/images/projects/hotelbeach/customer-register-details.png',
-        alt: 'Hotel Beach customer registration form details',
-        caption: 'Registration form'
-      },
-      {
-        src: '/images/projects/hotelbeach/about-footer.png',
-        alt: 'Hotel Beach about page footer',
-        caption: 'About page footer'
-      },
-      {
-        src: '/images/projects/hotelbeach/home-footer.png',
-        alt: 'Hotel Beach home page footer',
-        caption: 'Homepage footer'
-      },
-      {
         src: '/images/projects/hotelbeach/home-signed-in.png',
         alt: 'Hotel Beach home page with a signed-in user',
         caption: 'Signed-in homepage'
       },
       {
-        src: '/images/projects/hotelbeach/home-alternate.png',
-        alt: 'Hotel Beach alternate public home page view',
-        caption: 'Homepage view'
+        src: '/images/projects/hotelbeach/reservations.png',
+        alt: 'Hotel Beach reservations page',
+        caption: 'Reservation management'
+      },
+      {
+        src: '/images/projects/hotelbeach/employees.png',
+        alt: 'Hotel Beach employees administration',
+        caption: 'Employee administration'
+      },
+      {
+        src: '/images/projects/hotelbeach/customers.png',
+        alt: 'Hotel Beach customers administration',
+        caption: 'Customer administration'
+      },
+      {
+        src: '/images/projects/hotelbeach/packages-admin.png',
+        alt: 'Hotel Beach package administration',
+        caption: 'Package administration'
       },
     ]
   },
@@ -302,6 +299,11 @@ export const projects = [
         caption: 'Gameplay'
       },
       {
+        src: '/images/projects/poppycatsitter/gameplay-screen-one.png',
+        alt: 'Poppy Cat Sitter gameplay screen',
+        caption: 'Gameplay screen'
+      },
+      {
         src: '/images/projects/poppycatsitter/store.png',
         alt: 'Poppy Cat Sitter store',
         caption: 'In-game store'
@@ -312,9 +314,9 @@ export const projects = [
         caption: 'Experience progression'
       },
       {
-        src: '/images/projects/poppycatsitter/sleeping-cat.png',
-        alt: 'Poppy Cat Sitter sleeping cat game scene',
-        caption: 'Sleeping cat scene'
+        src: '/images/projects/poppycatsitter/gameplay-screen-two.png',
+        alt: 'Poppy Cat Sitter alternate gameplay screen',
+        caption: 'Alternate gameplay screen'
       },
       {
         src: '/images/projects/poppycatsitter/night-scene.png',
@@ -322,14 +324,9 @@ export const projects = [
         caption: 'Nighttime scene'
       },
       {
-        src: '/images/projects/poppycatsitter/gameplay-screen-one.png',
-        alt: 'Poppy Cat Sitter gameplay screen',
-        caption: 'Gameplay screen'
-      },
-      {
-        src: '/images/projects/poppycatsitter/gameplay-screen-two.png',
-        alt: 'Poppy Cat Sitter alternate gameplay screen',
-        caption: 'Alternate gameplay screen'
+        src: '/images/projects/poppycatsitter/sleeping-cat.png',
+        alt: 'Poppy Cat Sitter sleeping cat game scene',
+        caption: 'Sleeping cat scene'
       },
     ]
   },
@@ -378,8 +375,13 @@ export const projects = [
       'Organized website content and supported the development of an online presence across web and social platforms.',
       'Collaborated on digital materials and online profiles aimed at improving visibility and accessibility for local ventures.'
     ],
-    links: [],
+    links: [{ label: 'Vistas del Encanto Website', url: 'https://sites.google.com/view/vistas-del-encanto?usp=sharing' }],
     screenshots: [
+      {
+        src: '/images/projects/tcu/ucr-logo.jpg',
+        alt: 'Mandala Creaciones profile image',
+        caption: 'Mandala Creaciones · Profile identity'
+      },
       {
         src: '/images/projects/tcu/mandala-cover.png',
         alt: 'Mandala Creaciones Facebook cover',
@@ -391,14 +393,49 @@ export const projects = [
         caption: 'Mandala Creaciones · Profile identity'
       },
       {
+        src: '/images/projects/tcu/mandala-post.png',
+        alt: 'Mandala Creaciones social media post',
+        caption: 'Mandala Creaciones · Digital content'
+      },
+      {
+        src: '/images/projects/tcu/mandala-post-two.png',
+        alt: 'Mandala Creaciones social media publication two',
+        caption: 'Social media publication'
+      },
+      {
+        src: '/images/projects/tcu/mandala-facebook-current.png',
+        alt: 'Mandala Creaciones current Facebook page',
+        caption: 'Current Facebook page'
+      },
+      {
         src: '/images/projects/tcu/mandala-facebook.png',
         alt: 'Mandala Creaciones Facebook presence',
         caption: 'Mandala Creaciones · Online presence'
       },
       {
-        src: '/images/projects/tcu/mandala-post.png',
-        alt: 'Mandala Creaciones social media post',
-        caption: 'Mandala Creaciones · Digital content'
+        src: '/images/projects/tcu/mandala-logo-variation-one.png',
+        alt: 'Mandala Creaciones logo variation',
+        caption: 'Logo variation'
+      },
+      {
+        src: '/images/projects/tcu/mandala-logo-variation-two.png',
+        alt: 'Mandala Creaciones alternate logo design',
+        caption: 'Alternate logo'
+      },
+      {
+        src: '/images/projects/tcu/mandala-post-three.png',
+        alt: 'Mandala Creaciones social media publication three',
+        caption: 'Social media publication'
+      },
+      {
+        src: '/images/projects/tcu/mandala-post-four.png',
+        alt: 'Mandala Creaciones social media publication four',
+        caption: 'Social media publication'
+      },
+      {
+        src: '/images/projects/tcu/mandala-post-five.png',
+        alt: 'Mandala Creaciones social media publication five',
+        caption: 'Social media publication'
       },
       {
         src: '/images/projects/tcu/ojo-de-buey-cover.png',
@@ -421,6 +458,21 @@ export const projects = [
         caption: 'Ojo de Buey · Digital content'
       },
       {
+        src: '/images/projects/tcu/ojo-de-buey-facebook-current.png',
+        alt: 'Ojo de Buey current Facebook page',
+        caption: 'Current Facebook page'
+      },
+      {
+        src: '/images/projects/tcu/ojo-de-buey-post-two.png',
+        alt: 'Ojo de Buey social media publication two',
+        caption: 'Social media publication'
+      },
+      {
+        src: '/images/projects/tcu/ojo-de-buey-post-three.png',
+        alt: 'Ojo de Buey social media publication three',
+        caption: 'Social media publication'
+      },
+      {
         src: '/images/projects/tcu/finca-paraiso-cover.png',
         alt: 'Finca Paraíso Facebook cover',
         caption: 'Finca Paraíso · Cover design'
@@ -441,6 +493,16 @@ export const projects = [
         caption: 'Finca Paraíso · Mission content'
       },
       {
+        src: '/images/projects/tcu/finca-paraiso-design-option.png',
+        alt: 'Finca Paraíso visual identity design option',
+        caption: 'Identity design option'
+      },
+      {
+        src: '/images/projects/tcu/finca-paraiso-vision.png',
+        alt: 'Finca Paraíso vision statement design',
+        caption: 'Vision statement'
+      },
+      {
         src: '/images/projects/tcu/mufer-cover.png',
         alt: 'MUFER Facebook cover',
         caption: 'MUFER · Cover design'
@@ -457,63 +519,8 @@ export const projects = [
         caption: 'MUFER · Mission content'
       },
       {
-        src: '/images/projects/tcu/mandala-facebook-current.png',
-        alt: 'Mandala Creaciones current Facebook page',
-        caption: 'Current Facebook page'
-      },
-      {
-        src: '/images/projects/tcu/mandala-logo-variation-one.png',
-        alt: 'Mandala Creaciones logo variation',
-        caption: 'Logo variation'
-      },
-      {
-        src: '/images/projects/tcu/mandala-logo-variation-two.png',
-        alt: 'Mandala Creaciones alternate logo design',
-        caption: 'Alternate logo'
-      },
-      {
-        src: '/images/projects/tcu/mandala-post-two.png',
-        alt: 'Mandala Creaciones social media publication two',
-        caption: 'Social media publication'
-      },
-      {
-        src: '/images/projects/tcu/mandala-post-three.png',
-        alt: 'Mandala Creaciones social media publication three',
-        caption: 'Social media publication'
-      },
-      {
-        src: '/images/projects/tcu/mandala-post-four.png',
-        alt: 'Mandala Creaciones social media publication four',
-        caption: 'Social media publication'
-      },
-      {
-        src: '/images/projects/tcu/mandala-post-five.png',
-        alt: 'Mandala Creaciones social media publication five',
-        caption: 'Social media publication'
-      },
-      {
-        src: '/images/projects/tcu/ojo-de-buey-facebook-current.png',
-        alt: 'Ojo de Buey current Facebook page',
-        caption: 'Current Facebook page'
-      },
-      {
-        src: '/images/projects/tcu/ojo-de-buey-post-two.png',
-        alt: 'Ojo de Buey social media publication two',
-        caption: 'Social media publication'
-      },
-      {
-        src: '/images/projects/tcu/ojo-de-buey-post-three.png',
-        alt: 'Ojo de Buey social media publication three',
-        caption: 'Social media publication'
-      },
-      {
-        src: '/images/projects/tcu/finca-paraiso-design-option.png',
-        alt: 'Finca Paraíso visual identity design option',
-        caption: 'Identity design option'
-      },
-      {
-        src: '/images/projects/tcu/finca-paraiso-vision.png',
-        alt: 'Finca Paraíso vision statement design',
+        src: '/images/projects/tcu/mufer-vision.png',
+        alt: 'MUFER vision statement design',
         caption: 'Vision statement'
       },
       {
@@ -527,9 +534,29 @@ export const projects = [
         caption: 'Name meaning'
       },
       {
-        src: '/images/projects/tcu/mufer-vision.png',
-        alt: 'MUFER vision statement design',
-        caption: 'Vision statement'
+        src: '/images/projects/tcu/vistas-del-encanto-home.png',
+        alt: 'Vistas del Encanto home page design',
+        caption: 'Home page design'
+      },
+      {
+        src: '/images/projects/tcu/vistas-del-encanto-contact.png',
+        alt: 'Vistas del Encanto contact page design',
+        caption: 'Contact page design'
+      },
+      {
+        src: '/images/projects/tcu/vistas-del-encanto-contact-footer.png',
+        alt: 'Vistas del Encanto contact page footer design',
+        caption: 'Contact page footer design'
+      },
+      {
+        src: '/images/projects/tcu/vistas-del-encanto-FAQ.png',
+        alt: 'Vistas del Encanto FAQ page design',
+        caption: 'Frequently Asked Questions page design'
+      },
+      {
+        src: '/images/projects/tcu/vistas-del-encanto-FAQ2.png',
+        alt: 'Vistas del Encanto FAQ page 2 design',
+        caption: 'Frequently Asked Questions page design part 2'
       },
     ]
   }
