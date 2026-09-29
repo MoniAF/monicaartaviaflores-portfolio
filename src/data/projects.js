@@ -99,7 +99,47 @@ export const projects = [
         src: '/images/projects/bloomrecipes/about.png',
         alt: 'Bloom Recipes about page',
         caption: 'About the project'
-      }
+      },
+      {
+        src: '/images/projects/bloomrecipes/footer-home.png',
+        alt: 'Bloom Recipes home page footer',
+        caption: 'Homepage footer'
+      },
+      {
+        src: '/images/projects/bloomrecipes/details-info.png',
+        alt: 'Bloom Recipes recipe details and information',
+        caption: 'Recipe information'
+      },
+      {
+        src: '/images/projects/bloomrecipes/details-related.png',
+        alt: 'Bloom Recipes related recipes section',
+        caption: 'Related recipes'
+      },
+      {
+        src: '/images/projects/bloomrecipes/login.png',
+        alt: 'Bloom Recipes sign-in screen',
+        caption: 'Sign in'
+      },
+      {
+        src: '/images/projects/bloomrecipes/profile.png',
+        alt: 'Bloom Recipes signed-in profile and sign-out option',
+        caption: 'Signed-in profile'
+      },
+      {
+        src: '/images/projects/bloomrecipes/menu.png',
+        alt: 'Bloom Recipes navigation menu',
+        caption: 'Navigation menu'
+      },
+      {
+        src: '/images/projects/bloomrecipes/hero-message.png',
+        alt: 'Bloom Recipes welcome message card',
+        caption: 'Welcome message'
+      },
+      {
+        src: '/images/projects/bloomrecipes/signup.png',
+        alt: 'Bloom Recipes account registration screen',
+        caption: 'Create an account'
+      },
     ]
   },
   {
@@ -178,7 +218,37 @@ export const projects = [
         src: '/images/projects/hotelbeach/staff-login.png',
         alt: 'Hotel Beach staff login',
         caption: 'Staff login'
-      }
+      },
+      {
+        src: '/images/projects/hotelbeach/about-details.png',
+        alt: 'Hotel Beach additional about page view',
+        caption: 'About page details'
+      },
+      {
+        src: '/images/projects/hotelbeach/customer-register-details.png',
+        alt: 'Hotel Beach customer registration form details',
+        caption: 'Registration form'
+      },
+      {
+        src: '/images/projects/hotelbeach/about-footer.png',
+        alt: 'Hotel Beach about page footer',
+        caption: 'About page footer'
+      },
+      {
+        src: '/images/projects/hotelbeach/home-footer.png',
+        alt: 'Hotel Beach home page footer',
+        caption: 'Homepage footer'
+      },
+      {
+        src: '/images/projects/hotelbeach/home-signed-in.png',
+        alt: 'Hotel Beach home page with a signed-in user',
+        caption: 'Signed-in homepage'
+      },
+      {
+        src: '/images/projects/hotelbeach/home-alternate.png',
+        alt: 'Hotel Beach alternate public home page view',
+        caption: 'Homepage view'
+      },
     ]
   },
   {
@@ -240,7 +310,27 @@ export const projects = [
         src: '/images/projects/poppycatsitter/experience.png',
         alt: 'Poppy Cat Sitter experience screen',
         caption: 'Experience progression'
-      }
+      },
+      {
+        src: '/images/projects/poppycatsitter/sleeping-cat.png',
+        alt: 'Poppy Cat Sitter sleeping cat game scene',
+        caption: 'Sleeping cat scene'
+      },
+      {
+        src: '/images/projects/poppycatsitter/night-scene.png',
+        alt: 'Poppy Cat Sitter nighttime game scene',
+        caption: 'Nighttime scene'
+      },
+      {
+        src: '/images/projects/poppycatsitter/gameplay-screen-one.png',
+        alt: 'Poppy Cat Sitter gameplay screen',
+        caption: 'Gameplay screen'
+      },
+      {
+        src: '/images/projects/poppycatsitter/gameplay-screen-two.png',
+        alt: 'Poppy Cat Sitter alternate gameplay screen',
+        caption: 'Alternate gameplay screen'
+      },
     ]
   },
   {
@@ -365,7 +455,82 @@ export const projects = [
         src: '/images/projects/tcu/mufer-mission.png',
         alt: 'MUFER mission statement design',
         caption: 'MUFER · Mission content'
-      }
+      },
+      {
+        src: '/images/projects/tcu/mandala-facebook-current.png',
+        alt: 'Mandala Creaciones current Facebook page',
+        caption: 'Current Facebook page'
+      },
+      {
+        src: '/images/projects/tcu/mandala-logo-variation-one.png',
+        alt: 'Mandala Creaciones logo variation',
+        caption: 'Logo variation'
+      },
+      {
+        src: '/images/projects/tcu/mandala-logo-variation-two.png',
+        alt: 'Mandala Creaciones alternate logo design',
+        caption: 'Alternate logo'
+      },
+      {
+        src: '/images/projects/tcu/mandala-post-two.png',
+        alt: 'Mandala Creaciones social media publication two',
+        caption: 'Social media publication'
+      },
+      {
+        src: '/images/projects/tcu/mandala-post-three.png',
+        alt: 'Mandala Creaciones social media publication three',
+        caption: 'Social media publication'
+      },
+      {
+        src: '/images/projects/tcu/mandala-post-four.png',
+        alt: 'Mandala Creaciones social media publication four',
+        caption: 'Social media publication'
+      },
+      {
+        src: '/images/projects/tcu/mandala-post-five.png',
+        alt: 'Mandala Creaciones social media publication five',
+        caption: 'Social media publication'
+      },
+      {
+        src: '/images/projects/tcu/ojo-de-buey-facebook-current.png',
+        alt: 'Ojo de Buey current Facebook page',
+        caption: 'Current Facebook page'
+      },
+      {
+        src: '/images/projects/tcu/ojo-de-buey-post-two.png',
+        alt: 'Ojo de Buey social media publication two',
+        caption: 'Social media publication'
+      },
+      {
+        src: '/images/projects/tcu/ojo-de-buey-post-three.png',
+        alt: 'Ojo de Buey social media publication three',
+        caption: 'Social media publication'
+      },
+      {
+        src: '/images/projects/tcu/finca-paraiso-design-option.png',
+        alt: 'Finca Paraíso visual identity design option',
+        caption: 'Identity design option'
+      },
+      {
+        src: '/images/projects/tcu/finca-paraiso-vision.png',
+        alt: 'Finca Paraíso vision statement design',
+        caption: 'Vision statement'
+      },
+      {
+        src: '/images/projects/tcu/mufer-facebook-current.png',
+        alt: 'MUFER current Facebook page',
+        caption: 'Current Facebook page'
+      },
+      {
+        src: '/images/projects/tcu/mufer-name-meaning.png',
+        alt: 'MUFER name meaning design',
+        caption: 'Name meaning'
+      },
+      {
+        src: '/images/projects/tcu/mufer-vision.png',
+        alt: 'MUFER vision statement design',
+        caption: 'Vision statement'
+      },
     ]
   }
 ]

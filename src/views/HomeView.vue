@@ -137,7 +137,7 @@ import { experience, skillGroups, softSkills, certifications } from '@/data/prof
           The work included digital materials and online profiles aimed at improving visibility and
           accessibility for local ventures.
         </p>
-        <RouterLink class="button button--primary __btn_cc" to="/project/tcu"
+        <RouterLink class="button button--primary" to="/project/tcu"
           >Explore the TCU project ↗</RouterLink
         >
       </div>
