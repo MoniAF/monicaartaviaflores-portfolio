@@ -53,7 +53,7 @@ onMounted(() => {
   window.addEventListener('scroll', trackSection, { passive: true })
   document.addEventListener('click', closeMenu)
   document.addEventListener('keydown', closeMenu)
-  trackSection()
+  requestAnimationFrame(() => requestAnimationFrame(trackSection))
 })
 onUnmounted(() => {
   window.removeEventListener('scroll', trackSection)
